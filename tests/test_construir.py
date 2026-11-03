@@ -83,6 +83,14 @@ class LoGenerado(unittest.TestCase):
             self.assertEqual(o["spec_version"], "2.1")
             self.assertIn(o["confidence"], (30, 60, 85))
 
+    def test_stix_lo_acepta_la_biblioteca_oficial_en_modo_estricto(self):
+        try:
+            import stix2
+        except ImportError:
+            self.skipTest("stix2 no está instalado (pip install stix2)")
+        b = stix2.parse(self.archivos["stix/scgx02.json"], allow_custom=False)
+        self.assertEqual(len(b.objects), len(self.bundle["objects"]))
+
     def test_los_feeds_tienen_valores_sin_desarmar(self):
         for ruta in ("feeds/dominios.txt", "feeds/urls.txt"):
             for linea in self.archivos[ruta].splitlines()[1:]:
