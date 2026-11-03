@@ -117,6 +117,17 @@ class LoQueNoSePublica(unittest.TestCase):
                 for p in prohibidos:
                     self.assertNotIn(p, texto, f"{a} contiene un término prohibido")
 
+    def test_las_reglas_yara_compilan_y_detectan_el_panel(self):
+        try:
+            import yara
+        except ImportError:
+            self.skipTest("yara-python no está instalado (pip install yara-python)")
+        reglas = yara.compile(filepath=os.path.join(RAIZ, "yara", "scgx02.yar"))
+        self.assertEqual(len(list(reglas)), 5)
+        panel = b"<html><head><title>Login Page</title></head><body><h1>SCGX02 PANEL</h1></body></html>"
+        self.assertEqual([m.rule for m in reglas.match(data=panel)], ["PHISH_Kit_SCGX02_Panel"])
+        self.assertEqual(reglas.match(data=b"%PDF-1.7 " + b"x" * 2000), [])
+
     def test_las_reglas_yara_estan_balanceadas(self):
         with open(os.path.join(RAIZ, "yara", "scgx02.yar"), encoding="utf-8") as fh:
             texto = fh.read()

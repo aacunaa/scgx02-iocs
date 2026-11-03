@@ -14,5 +14,7 @@ jobs:
           persist-credentials: false
       - name: Datos válidos y archivos generados al día
         run: python3 scripts/construir.py --comprobar
+      - name: Instalar yara-python (compila y prueba las reglas)
+        run: python3 -m pip install --user --no-cache-dir yara-python==4.5.4
       - name: Pruebas
         run: python3 -m unittest discover -s tests -v

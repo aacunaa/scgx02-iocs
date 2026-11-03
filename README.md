@@ -22,6 +22,8 @@ Indicadores de compromiso de una campaña de **phishing de adversario en el medi
 | [`yara/scgx02.yar`](yara/scgx02.yar) | Cinco reglas: el PDF señuelo, el gate de la landing, el loader cifrado, el panel y el JavaScript de la etapa 3 | Cazar en adjuntos, caché de proxy y kits recuperados |
 | [`datos/iocs.csv`](datos/iocs.csv) | La fuente: todo lo demás se genera desde aquí | Proponer cambios |
 
+**Las reglas YARA** compilan con YARA 4.5. Se probaron contra las muestras del incidente: detectan el PDF señuelo, el gate de la landing y el loader cifrado. Contra 6.913 archivos limpios de un equipo de trabajo, 502 de ellos PDF, no dieron falsos positivos. La regla del JavaScript de la etapa 3 (v2) no tiene una muestra legible para probarla: el antivirus la bloquea. La regla del panel también salta con un documento que cite «SCGX02 PANEL»: úsela sobre capturas HTTP, no sobre informes.
+
 **Cómo bloquear:** use `feeds/dominios.txt` **e incluya los subdominios** de los dominios base. Las landings usan subdominios nuevos con el nombre de cada víctima, que no se publican. `feeds/dominios_activos.txt` trae solo lo que seguía en pie en la última revalidación.
 
 **Para encontrar paneles nuevos:** en urlscan.io, busque `hash:204a6074190b83402459e7402d13451443b72d4868eb4975d4dfffb420b4e57a`.
