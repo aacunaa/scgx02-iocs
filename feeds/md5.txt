@@ -1,0 +1,2 @@
+# SCGX02 / CodeStorm — hashes MD5 de archivos. TLP:CLEAR. Versión 2026-11-01. Fuente: datos/iocs.csv. Un valor por línea.
+c09b8641a009226432dc9a00d75a09d6

@@ -1,0 +1,2692 @@
+{
+ "type": "bundle",
+ "id": "bundle--f60d4955-ca30-5b60-aa5f-7e98f2da67e8",
+ "objects": [
+  {
+   "type": "marking-definition",
+   "spec_version": "2.1",
+   "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+   "created": "2017-01-20T00:00:00.000Z",
+   "definition_type": "tlp",
+   "name": "TLP:WHITE",
+   "definition": {
+    "tlp": "white"
+   }
+  },
+  {
+   "type": "identity",
+   "spec_version": "2.1",
+   "id": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "name": "Raiku Solutions",
+   "identity_class": "organization",
+   "sectors": [
+    "technology"
+   ],
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "campaign",
+   "id": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "SCGX02 / CodeStorm",
+   "description": "Phishing de adversario en el medio (AiTM) contra cuentas de Microsoft 365, entregado desde cuentas reales de proveedores comprometidos. Kit con panel «SCGX02 PANEL», landings detrás de Cloudflare y la interfaz de phishing en buckets de Tencent Cloud.",
+   "first_seen": "2026-10-07T00:00:00.000Z"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--7210d0de-bcb2-5765-8c64-166fb95f29d5",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit (campaña de octubre): seatofpresence[.]de",
+   "description": "dominio estacionado; el panel raven81 cayó",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'seatofpresence.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-07T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:caido"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--fa0e7e14-741f-5e42-a91e-af08fc63dfd1",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--7210d0de-bcb2-5765-8c64-166fb95f29d5",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--1fc9968c-44c6-5876-afb1-cf419e5d9d63",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit: gentlesunrise[.]de",
+   "description": "aloja el panel beta y una landing tras Turnstile",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'gentlesunrise.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--fb1e8cc8-57e9-5d2b-a382-7218249df94e",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--1fc9968c-44c6-5876-afb1-cf419e5d9d63",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--b31c5e77-2352-50e3-ba31-8ed85e198e92",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit: shimmeringglow[.]de",
+   "description": "panel quill99",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'shimmeringglow.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-07T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--43c0fede-cd9c-5f13-a7db-e3bcb22d6e23",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--b31c5e77-2352-50e3-ba31-8ed85e198e92",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--6951a052-b21e-5e19-bbd6-39e1b2a528be",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base de landings: comrandjet[.]com",
+   "description": "usaba el panel quill99",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'comrandjet.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-14T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--19048073-76f8-5fa2-bbee-6f64716427e4",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--6951a052-b21e-5e19-bbd6-39e1b2a528be",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--aa8da5dd-f7c3-506f-804a-598ca4665329",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit: morningmystery[.]de",
+   "description": "panel quartz84",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'morningmystery.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:caido"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--49bba920-e19e-5b03-8481-d222ea311c15",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--aa8da5dd-f7c3-506f-804a-598ca4665329",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--d82a901e-4398-5eeb-b467-da9b6358d99d",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit: preparednessmatters[.]de",
+   "description": "panel pierce35",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'preparednessmatters.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--74bb7178-bdb9-54dc-ab70-6f6b2454a452",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--d82a901e-4398-5eeb-b467-da9b6358d99d",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--cfaf4841-c0d5-5b60-8c3a-3dbb224ea1d5",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit: whispersofgoldenlight[.]de",
+   "description": "panel cedar69",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'whispersofgoldenlight.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--17cee0bf-a4c8-57b9-9bb0-41691551da15",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--cfaf4841-c0d5-5b60-8c3a-3dbb224ea1d5",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--714364d2-7436-5a1b-809a-f8b5ac1aad8d",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit: silverstreetmoon[.]de",
+   "description": "panel zephyr71",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'silverstreetmoon.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--5980dd8a-5caf-5bf3-94a4-b811188beb14",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--714364d2-7436-5a1b-809a-f8b5ac1aad8d",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--9472e7d4-872c-517c-bab1-eb1219f3e444",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit (versión 1; agosto de 2026): harmonyofnature[.]de",
+   "description": "Cloudflare lo marca como phishing",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'harmonyofnature.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:bloqueado"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--374ae163-fc61-51a2-a0e8-7953ba885fb4",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--9472e7d4-872c-517c-bab1-eb1219f3e444",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--c05bbdb1-d29d-5d90-9739-5f28956d5d5d",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit (septiembre de 2026): softlycloaked[.]de",
+   "description": "dominio base del kit (septiembre de 2026)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'softlycloaked.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:caido"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--40a30167-f8be-5741-8e20-b668975608c4",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--c05bbdb1-d29d-5d90-9739-5f28956d5d5d",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--f1e49a0c-f268-5d11-aaab-dd266cc11c23",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit: chairoftime[.]de",
+   "description": "panel tundra30",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'chairoftime.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-19T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--cc9717f8-24ba-5c69-8ddb-f4db474449fa",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--f1e49a0c-f268-5d11-aaab-dd266cc11c23",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--52c87c5d-07a8-5eb6-b942-2db04bc7693b",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit (señuelos en sueco): ancientrooftops[.]de",
+   "description": "panel lunar64 bloqueado por Cloudflare",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'ancientrooftops.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-19T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:bloqueado"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--5434b195-24ce-5163-aa7f-af32182a7571",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--52c87c5d-07a8-5eb6-b942-2db04bc7693b",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--9d641f28-9140-5d09-9db4-2b2ffe1a5e64",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit: morningbreezeflowers[.]de",
+   "description": "panel vault53",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'morningbreezeflowers.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-22T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--8ecc42b9-10d8-5995-a82b-87df31eb327e",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--9d641f28-9140-5d09-9db4-2b2ffe1a5e64",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--d100827f-1893-59a1-99c8-e214484f0a6c",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit: forestgolem[.]de",
+   "description": "panel pierce16",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'forestgolem.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-22T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--125b6f5f-f880-56dd-808f-cbed87a58d44",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--d100827f-1893-59a1-99c8-e214484f0a6c",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--27517c4b-92f5-533c-9e8d-52b4e7945abc",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit: essentialdocstorage[.]de",
+   "description": "panel pierce99",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'essentialdocstorage.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-22T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--c0f58632-08f8-5afe-be5d-feea542bbf0f",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--27517c4b-92f5-533c-9e8d-52b4e7945abc",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--e4c1a6fb-106f-5c2a-af27-2bc07ed4795e",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit: goldenvisionsforest[.]de",
+   "description": "panel granite10",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'goldenvisionsforest.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-22T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--cbff45d8-c0ac-5081-82f8-92e91c2354d2",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--e4c1a6fb-106f-5c2a-af27-2bc07ed4795e",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--0e47012a-7402-529e-8939-016061fe88b4",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base del kit: sleepingforestmystery[.]de",
+   "description": "panel jasper67",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'sleepingforestmystery.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-22T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--1c2f02f7-e05e-5ffb-af11-f3f7b4f91390",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--0e47012a-7402-529e-8939-016061fe88b4",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--0f93d419-dc2c-5a75-92a4-dbef7fc0a37c",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base preparado: sleepingforestmagic[.]de",
+   "description": "página de prueba de AlmaLinux",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'sleepingforestmagic.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-20T00:00:00.000Z",
+   "confidence": 60,
+   "labels": [
+    "estado:preparado"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--53b2845c-afba-57c5-8353-c4dd6ed0dab1",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--0f93d419-dc2c-5a75-92a4-dbef7fc0a37c",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--bcf4993e-95a4-5607-93ad-9547386a0e76",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base preparado: eagerlyshowingoff[.]de",
+   "description": "página de prueba de AlmaLinux",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'eagerlyshowingoff.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-20T00:00:00.000Z",
+   "confidence": 60,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--44445916-8a9e-5890-9f53-6fc729bab77e",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--bcf4993e-95a4-5607-93ad-9547386a0e76",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--ee717f93-72d0-5977-8274-b20ede71fc18",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio base de landings: hcenginreering[.]net",
+   "description": "sus landings llaman al panel quill99",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'hcenginreering.net']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-30T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--c90d74a3-9113-5bae-82e5-c19252343b26",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--ee717f93-72d0-5977-8274-b20ede71fc18",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--a14dc0ec-ae74-5a79-bad2-5e7fbdd12e72",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador y robo de credenciales: raven81[.]seatofpresence[.]de",
+   "description": "/panel/ y /google.php",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'raven81.seatofpresence.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:caido"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--c9173c35-9b0d-5a27-92ba-81e52745ad14",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--a14dc0ec-ae74-5a79-bad2-5e7fbdd12e72",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--cc92bfcc-38fd-549b-99ed-f299ff359bc8",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador: quill99[.]shimmeringglow[.]de",
+   "description": "mismo HTML de panel (204a6074…)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'quill99.shimmeringglow.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--731abac8-a9ad-54af-aeb9-69d71ca49242",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--cc92bfcc-38fd-549b-99ed-f299ff359bc8",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--c58f7a6c-bbe1-57b7-b0ff-cecc8feeebee",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador: quartz84[.]morningmystery[.]de",
+   "description": "panel del operador",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'quartz84.morningmystery.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:caido"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--95ac8050-d60c-590c-a98c-c33422dcd2d4",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--c58f7a6c-bbe1-57b7-b0ff-cecc8feeebee",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--b3eb0590-e074-5cdd-9a8a-e891448037a4",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador: pierce35[.]preparednessmatters[.]de",
+   "description": "mismo HTML de panel",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'pierce35.preparednessmatters.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--21f57d36-1ef7-5d33-a2de-11ba11508901",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--b3eb0590-e074-5cdd-9a8a-e891448037a4",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--a5a6e18c-23b7-5e28-91e8-8d62bbe4cc72",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador: cedar69[.]whispersofgoldenlight[.]de",
+   "description": "mismo HTML de panel",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'cedar69.whispersofgoldenlight.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--5c5c54a8-9c63-5827-a3b9-45b1ba2faf7e",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--a5a6e18c-23b7-5e28-91e8-8d62bbe4cc72",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--a62f516f-6135-5d41-abf5-1c4bac45925c",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador: zephyr71[.]silverstreetmoon[.]de",
+   "description": "mismo HTML de panel",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'zephyr71.silverstreetmoon.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--4c2263b9-4930-5ef1-a068-adff66a163af",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--a62f516f-6135-5d41-abf5-1c4bac45925c",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--1edcd4d1-d9cb-5575-96a3-8ddbaaff5024",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del kit (versión 1): hjzok[.]harmonyofnature[.]de",
+   "description": "/capt.php",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'hjzok.harmonyofnature.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:bloqueado"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--4ea9ef02-83a1-5293-8125-2433a78458d1",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--1edcd4d1-d9cb-5575-96a3-8ddbaaff5024",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--95632dcc-58b0-56d0-a607-c7ecf5dc016f",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador: tundra30[.]chairoftime[.]de",
+   "description": "mismo HTML de panel",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'tundra30.chairoftime.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-19T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--a0f19e7d-e5db-58fb-b37c-4395f042ace4",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--95632dcc-58b0-56d0-a607-c7ecf5dc016f",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--ac518666-0716-5ac1-b49d-a20cb42bf6f8",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador: lunar64[.]ancientrooftops[.]de",
+   "description": "panel del operador",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'lunar64.ancientrooftops.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-19T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:bloqueado"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--34aebffa-8836-5a2b-bb21-39af3f3f1c3f",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--ac518666-0716-5ac1-b49d-a20cb42bf6f8",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--41bfaeb5-767f-56fd-a56c-e6b19b146f37",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador: beta[.]gentlesunrise[.]de",
+   "description": "mismo HTML de panel; desde el 1-nov la raíz es una landing tras Turnstile",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'beta.gentlesunrise.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--c2b8ef5e-072c-5e95-8485-d1b21af8c830",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--41bfaeb5-767f-56fd-a56c-e6b19b146f37",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--988cc30e-3be9-5df8-8bf1-5cc90b50feeb",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador: vault53[.]morningbreezeflowers[.]de",
+   "description": "mismo HTML de panel",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'vault53.morningbreezeflowers.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-22T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--15df9697-0794-54ad-a8ad-eb2ee3f713e7",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--988cc30e-3be9-5df8-8bf1-5cc90b50feeb",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--083ee623-2988-530c-83ed-1d3994f0bf57",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador: pierce16[.]forestgolem[.]de",
+   "description": "mismo HTML de panel",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'pierce16.forestgolem.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-22T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--a06287f9-ec1d-5429-9f01-51213756a067",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--083ee623-2988-530c-83ed-1d3994f0bf57",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--ffce587b-6bc8-53d7-8914-65ddc18d263a",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador: pierce99[.]essentialdocstorage[.]de",
+   "description": "mismo HTML de panel",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'pierce99.essentialdocstorage.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-22T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--768c77d4-b4c7-54e4-ab01-b84dffeee099",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--ffce587b-6bc8-53d7-8914-65ddc18d263a",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--d3ecb172-cc09-59e3-a3ac-4a642ca95390",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador: granite10[.]goldenvisionsforest[.]de",
+   "description": "mismo HTML de panel",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'granite10.goldenvisionsforest.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-22T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--7656f717-86a2-5951-a3b1-9ea2344131d8",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--d3ecb172-cc09-59e3-a3ac-4a642ca95390",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--8f4dbd4a-d6d6-5032-8e12-81432610539e",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel del operador: jasper67[.]sleepingforestmystery[.]de",
+   "description": "mismo HTML de panel",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'jasper67.sleepingforestmystery.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-22T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--a0ff089a-0426-523a-8f7b-271004ec99df",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--8f4dbd4a-d6d6-5032-8e12-81432610539e",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--525ebc24-c65b-58ab-8e45-2e21f7eb5a9f",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "host preparado: keluar[.]forestgolem[.]de",
+   "description": "página de prueba de AlmaLinux",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'keluar.forestgolem.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-29T00:00:00.000Z",
+   "confidence": 60,
+   "labels": [
+    "estado:preparado"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--8c6d793c-e582-530e-abee-049180a62849",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--525ebc24-c65b-58ab-8e45-2e21f7eb5a9f",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--87e3e0b5-bd29-586a-986e-f9c308d212f1",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "host preparado: enrollments[.]sleepingforestmagic[.]de",
+   "description": "página de prueba de AlmaLinux",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'enrollments.sleepingforestmagic.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-26T00:00:00.000Z",
+   "confidence": 60,
+   "labels": [
+    "estado:preparado"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--e5e200a6-47ed-5c5d-bc28-02655707708a",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--87e3e0b5-bd29-586a-986e-f9c308d212f1",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--16b257ec-edb2-54e6-813e-026571a772f1",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "landing: fileviewall[.]ancientrooftops[.]de",
+   "description": "landing",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'fileviewall.ancientrooftops.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-26T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:bloqueado"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--5d13a037-1da7-519a-ad5e-518cae952875",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--16b257ec-edb2-54e6-813e-026571a772f1",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--f6738e36-1220-5921-a0d2-be7393e9290e",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "landing (señuelo en sueco): sakrafiler[.]ancientrooftops[.]de",
+   "description": "landing (señuelo en sueco)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'sakrafiler.ancientrooftops.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-19T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--871af0d4-bf69-5221-aaa9-2463710a1ec4",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--f6738e36-1220-5921-a0d2-be7393e9290e",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--b2801dac-9321-5a07-b2d9-37f6d69d21e1",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "landing (señuelo en sueco): alladokument[.]ancientrooftops[.]de",
+   "description": "landing (señuelo en sueco)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'alladokument.ancientrooftops.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-19T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--f6fe6559-62c7-5fba-b69e-9617057e9ad1",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--b2801dac-9321-5a07-b2d9-37f6d69d21e1",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--d8446f1e-b506-5819-a58a-5535041c9ffa",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "landing: viewdocu[.]ancientrooftops[.]de",
+   "description": "landing",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'viewdocu.ancientrooftops.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-19T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--93ad2ec6-97e4-5405-a298-44a2a37e3053",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--d8446f1e-b506-5819-a58a-5535041c9ffa",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--52f8ba0c-cf9e-5c7a-b885-e9965c71132d",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "landing: puvzivjkgpjaqnpjlkyb[.]softlycloaked[.]de",
+   "description": "landing",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'puvzivjkgpjaqnpjlkyb.softlycloaked.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:caido"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--2bfbe5e8-93e3-50d3-8355-a471f3163c6a",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--52f8ba0c-cf9e-5c7a-b885-e9965c71132d",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--737a494c-27f8-536e-b251-78d1cd257129",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "landing: zgpvvyxjngmpbowhwdtm[.]morningmystery[.]de",
+   "description": "landing",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'zgpvvyxjngmpbowhwdtm.morningmystery.de']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:caido"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--919eafb2-ee57-5339-8544-4f90f3eb5ed2",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--737a494c-27f8-536e-b251-78d1cd257129",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--e241cf01-6f78-5683-8ede-12bc509a7135",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "bucket de Tencent COS con la interfaz de phishing (etapa 3): raven81-32b7-1497982805[.]cos[.]na-siliconvalley[.]myqcloud[.]com",
+   "description": "bucket de Tencent COS con la interfaz de phishing (etapa 3)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'raven81-32b7-1497982805.cos.na-siliconvalley.myqcloud.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--0abd4761-713f-5a25-8835-95248609fc40",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--e241cf01-6f78-5683-8ede-12bc509a7135",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--8239f4cf-53ce-5879-a419-b6289840ccf3",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "bucket de Tencent COS (etapa 3): quill99-55d7-1497982805[.]cos[.]na-siliconvalley[.]myqcloud[.]com",
+   "description": "bucket de Tencent COS (etapa 3)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'quill99-55d7-1497982805.cos.na-siliconvalley.myqcloud.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--db265bd9-78f2-5b91-b37a-5885adea0d24",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--8239f4cf-53ce-5879-a419-b6289840ccf3",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--2963c795-4367-5979-bfa0-56d8470f08b8",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "bucket de Tencent COS (etapa 3): quartz84-bd54-1497982805[.]cos[.]na-siliconvalley[.]myqcloud[.]com",
+   "description": "bucket de Tencent COS (etapa 3)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'quartz84-bd54-1497982805.cos.na-siliconvalley.myqcloud.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--d8eeeaaa-f50f-531d-ac31-85f67cdce57b",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--2963c795-4367-5979-bfa0-56d8470f08b8",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--70de4cb7-0959-5b3a-9182-f960d33b7be4",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "bucket de Tencent COS (etapa 3): vault53-d309-1497982805[.]cos[.]na-siliconvalley[.]myqcloud[.]com",
+   "description": "bucket de Tencent COS (etapa 3)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'vault53-d309-1497982805.cos.na-siliconvalley.myqcloud.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-22T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--bdbeeb49-ecb0-51f1-ad6c-508cde32cd9b",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--70de4cb7-0959-5b3a-9182-f960d33b7be4",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--90b0069b-46f4-5511-b018-5f976c69b752",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "bucket de Tencent COS (versión 1): cdstyr546tt54re5ty6y5-1457164341[.]cos[.]na-siliconvalley[.]myqcloud[.]com",
+   "description": "bucket de Tencent COS (versión 1)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'cdstyr546tt54re5ty6y5-1457164341.cos.na-siliconvalley.myqcloud.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--3d8e1ccb-e410-5516-9edf-447fb60feda8",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--90b0069b-46f4-5511-b018-5f976c69b752",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--e3cc7e68-643e-5cd7-b28c-194e9020470c",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "bucket de Tencent COS: htgftyhy6565tt54rr43-1457164341[.]cos[.]na-siliconvalley[.]myqcloud[.]com",
+   "description": "bucket de Tencent COS",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'htgftyhy6565tt54rr43-1457164341.cos.na-siliconvalley.myqcloud.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--2ab12817-e9ba-5333-bc03-afdbb6791ec1",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--e3cc7e68-643e-5cd7-b28c-194e9020470c",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--73817c2d-ffe7-5494-bbac-19e93f2f4057",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "bucket de Tencent COS: zephyr71-4bd9-1483637648[.]cos[.]na-siliconvalley[.]myqcloud[.]com",
+   "description": "dado de baja por Tencent",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'zephyr71-4bd9-1483637648.cos.na-siliconvalley.myqcloud.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:caido"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--73201ec4-0ae5-54c6-b8c4-8d331bb34e5c",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--73817c2d-ffe7-5494-bbac-19e93f2f4057",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--d9aeb853-d8e4-505a-8c1b-4eb3d9f4c801",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "bucket de Tencent COS: pierce99-e28e-1483637648[.]cos[.]na-siliconvalley[.]myqcloud[.]com",
+   "description": "bucket de Tencent COS",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'pierce99-e28e-1483637648.cos.na-siliconvalley.myqcloud.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-22T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--60e189d9-5ec0-55f0-a410-ce700f0f447e",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--d9aeb853-d8e4-505a-8c1b-4eb3d9f4c801",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--07fe3fe8-b83a-5b23-b122-edd7973a1c0b",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "bucket de Tencent COS: krypton85-6f10-1483637648[.]cos[.]na-siliconvalley[.]myqcloud[.]com",
+   "description": "bucket de Tencent COS",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'krypton85-6f10-1483637648.cos.na-siliconvalley.myqcloud.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--814313c0-7436-5e0e-86a8-b9d0421d1ae2",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--07fe3fe8-b83a-5b23-b122-edd7973a1c0b",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--5905537a-227c-5e2e-975a-019a49f217e7",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "bucket de Tencent COS: lunar64-9eb9-1483637648[.]cos[.]na-siliconvalley[.]myqcloud[.]com",
+   "description": "bucket de Tencent COS",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'lunar64-9eb9-1483637648.cos.na-siliconvalley.myqcloud.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-22T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--fff6a141-5ee2-59c7-8478-85fef524bc10",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--5905537a-227c-5e2e-975a-019a49f217e7",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--7144c57a-ff7c-55eb-910e-eabe1b6a193c",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "salto de redirección (AWS S3): public-resource-4896531063069088[.]s3[.]ap-south-1[.]amazonaws[.]com",
+   "description": "salto de redirección (AWS S3)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'public-resource-4896531063069088.s3.ap-south-1.amazonaws.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--cb8472b0-5b92-5819-846a-b20432aca375",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--7144c57a-ff7c-55eb-910e-eabe1b6a193c",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--4a36765b-2d73-5892-8f00-5fb30c5d69f3",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "página de phishing (Linode Object Storage): msoff-standard-cran-v557br-com[.]id-cgk-1[.]linodeobjects[.]com",
+   "description": "página de phishing (Linode Object Storage)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'msoff-standard-cran-v557br-com.id-cgk-1.linodeobjects.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--050624a4-ce43-52ff-b685-fd7d166e0f18",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--4a36765b-2d73-5892-8f00-5fb30c5d69f3",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--0512144b-969c-587b-8f3e-34716900b5ad",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "salto de redirección (Azure Blob): hfkme[.]blob[.]core[.]windows[.]net",
+   "description": "salto de redirección (Azure Blob)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'hfkme.blob.core.windows.net']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--ffead758-44d1-5531-9c7d-db1c063020b5",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--0512144b-969c-587b-8f3e-34716900b5ad",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--6c6a5cac-b94a-52d6-8ac3-6e390f5ca94e",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "salto de entrega (señuelo «Adobe Acrobat»): onffline0901[.]survey-terminaloffviceadmimsurrond[.]cloud",
+   "description": "salto de entrega (señuelo «Adobe Acrobat»)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'onffline0901.survey-terminaloffviceadmimsurrond.cloud']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-13T00:00:00.000Z",
+   "confidence": 60,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--caad14fc-ade7-5c8e-b326-f3552ec856e5",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--6c6a5cac-b94a-52d6-8ac3-6e390f5ca94e",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--171e2d4f-abe5-5b2b-8733-9aed8df43379",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "robo de credenciales en tiempo real: hxxps://raven81[.]seatofpresence[.]de/google.php",
+   "description": "robo de credenciales en tiempo real",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[url:value = 'https://raven81.seatofpresence.de/google.php']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:caido"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--0b7c40b4-c9fb-5a99-a640-219239135557",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--171e2d4f-abe5-5b2b-8733-9aed8df43379",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--8d84d523-e167-5562-9a48-80ecaf701856",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "contador de visitas del panel: hxxps://raven81[.]seatofpresence[.]de/panel/?api&visit",
+   "description": "contador de visitas del panel",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[url:value = 'https://raven81.seatofpresence.de/panel/?api&visit']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:caido"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--fa1104eb-c725-5e63-aa4a-1867f97f45e2",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--8d84d523-e167-5562-9a48-80ecaf701856",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--eb057df9-8d95-55d7-9a87-39a9c5423643",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "contador de visitas del panel: hxxps://quill99[.]shimmeringglow[.]de/panel/?api&visit",
+   "description": "lo llaman las landings de hcenginreering.net",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[url:value = 'https://quill99.shimmeringglow.de/panel/?api&visit']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-30T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--5aa0a5fb-3b55-598b-8e38-35fc8a67423f",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--eb057df9-8d95-55d7-9a87-39a9c5423643",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--3d774d20-df0b-59ee-9da8-8c36c3a7fa5d",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "robo de credenciales (versión 1): hxxps://hjzok[.]harmonyofnature[.]de/capt.php",
+   "description": "robo de credenciales (versión 1)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[url:value = 'https://hjzok.harmonyofnature.de/capt.php']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:bloqueado"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--11c9add7-1409-50e2-a8ea-4b17db8531e1",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--3d774d20-df0b-59ee-9da8-8c36c3a7fa5d",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--d1c149a9-b591-5919-8408-d32f241910df",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "salto de redirección: hxxps://hfkme[.]blob[.]core[.]windows[.]net/hfkme/hfk.html",
+   "description": "salto de redirección",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[url:value = 'https://hfkme.blob.core.windows.net/hfkme/hfk.html']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--53a5c6b4-70a2-5a3a-b5d8-5076cdbdca5f",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--d1c149a9-b591-5919-8408-d32f241910df",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--58967370-5192-5558-bafc-56548fd52ce8",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "acortador hacia landings de lunar64: hxxps://flyn[.]co/pKaYZP",
+   "description": "acortador hacia landings de lunar64",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[url:value = 'https://flyn.co/pKaYZP']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-12T00:00:00.000Z",
+   "confidence": 60,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--695278c0-ad17-56aa-8924-e334467da191",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--58967370-5192-5558-bafc-56548fd52ce8",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--b693fd83-ad08-5cc2-b9d2-34b77650aeb4",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "PDF señuelo cifrado: 965491e2aa913bcee12580f20f16f3f70d9c26b3b31cb7ade46a742758e8903a",
+   "description": "una página con una imagen y un enlace oculto",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[file:hashes.'SHA-256' = '965491e2aa913bcee12580f20f16f3f70d9c26b3b31cb7ade46a742758e8903a']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": []
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--d2932e95-2f2e-5283-902b-d082ad61c61c",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--b693fd83-ad08-5cc2-b9d2-34b77650aeb4",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--d4645138-a194-5cbf-bcda-a7e60e61eaf9",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "PDF señuelo cifrado: c09b8641a009226432dc9a00d75a09d6",
+   "description": "PDF señuelo cifrado",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[file:hashes.MD5 = 'c09b8641a009226432dc9a00d75a09d6']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": []
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--38dcd059-6bf2-55c6-b488-16493e3533cc",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--d4645138-a194-5cbf-bcda-a7e60e61eaf9",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--b8f6c0be-cf02-5447-b141-cc00e4dcf4d5",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "JavaScript del kit (etapa 3; versión 1): 17299201e289b01ae7ba077ba9a56a4a8f810613c9f6476fe16df945906d899a",
+   "description": "JavaScript del kit (etapa 3; versión 1)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[file:hashes.'SHA-256' = '17299201e289b01ae7ba077ba9a56a4a8f810613c9f6476fe16df945906d899a']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 85,
+   "labels": []
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--a2078573-7e28-55d2-a73d-2d3ad0a459af",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--b8f6c0be-cf02-5447-b141-cc00e4dcf4d5",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--1aafca4c-557e-5cb1-aeca-cb9b88a53c28",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "JavaScript del kit (etapa 3; versión 2): aa7351b192f1e577e2033e114155d9ce520762e1abd19a4b3b777b4483ffbb4c",
+   "description": "JavaScript del kit (etapa 3; versión 2)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[file:hashes.'SHA-256' = 'aa7351b192f1e577e2033e114155d9ce520762e1abd19a4b3b777b4483ffbb4c']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 85,
+   "labels": []
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--723f5dce-5bc2-5cf2-871b-a1be69ab2fb8",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--1aafca4c-557e-5cb1-aeca-cb9b88a53c28",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--0456cd64-f169-5946-96c4-3d384487c8f3",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "HTML del panel /panel/ («SCGX02 PANEL»): 204a6074190b83402459e7402d13451443b72d4868eb4975d4dfffb420b4e57a",
+   "description": "buscar en urlscan con hash:<valor> para encontrar paneles",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[file:hashes.'SHA-256' = '204a6074190b83402459e7402d13451443b72d4868eb4975d4dfffb420b4e57a']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-19T00:00:00.000Z",
+   "confidence": 85,
+   "labels": []
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--107c2ac9-8b4b-5ef9-9685-913a02a53128",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--0456cd64-f169-5946-96c4-3d384487c8f3",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--07108147-c52b-58f5-866f-f62307cca3e9",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "certificado comodín Sectigo *.seatofpresence.de: d19763e2452f2f684756a182bf26b5e2bde07879fecc3f8c2cfc10ade4c1532b",
+   "description": "probablemente en el origen",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[x509-certificate:hashes.'SHA-256' = 'd19763e2452f2f684756a182bf26b5e2bde07879fecc3f8c2cfc10ade4c1532b']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-16T00:00:00.000Z",
+   "confidence": 60,
+   "labels": []
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--8b83991b-1da8-5221-99cc-2c93fc39ba50",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--07108147-c52b-58f5-866f-f62307cca3e9",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--c7926836-0cc0-5110-b7b9-07e63a72586c",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "certificado comodín Sectigo *.chairoftime.de: 26496f25f0062e7cf05b833dcdac92192114ad4403dc746794348af9c17eac35",
+   "description": "certificado comodín Sectigo *.chairoftime.de",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[x509-certificate:hashes.'SHA-256' = '26496f25f0062e7cf05b833dcdac92192114ad4403dc746794348af9c17eac35']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-19T00:00:00.000Z",
+   "confidence": 60,
+   "labels": []
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--beb576d5-3505-5865-91be-a1cceba5a518",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--c7926836-0cc0-5110-b7b9-07e63a72586c",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--9cf6ee17-4a9d-5b34-94df-11f4314c9ef8",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "certificado comodín Sectigo *.softlycloaked.de: a75f412779e733cd66987f482688a36bf354fa590746614f0ddbc430095db944",
+   "description": "certificado comodín Sectigo *.softlycloaked.de",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[x509-certificate:hashes.'SHA-256' = 'a75f412779e733cd66987f482688a36bf354fa590746614f0ddbc430095db944']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 60,
+   "labels": []
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--27a752fd-14b4-55c9-b525-5d7e7b374d17",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--9cf6ee17-4a9d-5b34-94df-11f4314c9ef8",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--dc761792-af5d-5633-9c01-b20dd67152c0",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "certificado comodín Sectigo *.softlycloaked.de: 055808552ea0e0303ea1e9847646df891f073a194f9c7e249b7067c1e7be6242",
+   "description": "certificado comodín Sectigo *.softlycloaked.de",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[x509-certificate:hashes.'SHA-256' = '055808552ea0e0303ea1e9847646df891f073a194f9c7e249b7067c1e7be6242']",
+   "pattern_type": "stix",
+   "valid_from": "2026-10-18T00:00:00.000Z",
+   "confidence": 60,
+   "labels": []
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--a6f87647-b699-5e9f-8d28-b163f7d45c1e",
+   "spec_version": "2.1",
+   "created": "2026-11-01T00:00:00.000Z",
+   "modified": "2026-11-01T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--dc761792-af5d-5633-9c01-b20dd67152c0",
+   "target_ref": "campaign--470a3d2a-e47a-50c3-a36d-a2743521e573"
+  }
+ ]
+}
