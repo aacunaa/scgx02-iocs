@@ -1,4 +1,5 @@
-# SCGX02 / CodeStorm — dominios y hosts activos, preparados o bloqueados al 2026-11-01. TLP:CLEAR. Versión 2026-11-01. Fuente: datos/iocs.csv. Un valor por línea.
+# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM — dominios y hosts activos, preparados o bloqueados al 2026-11-03. TLP:CLEAR. Versión 2026-11-03. Fuente: datos/iocs.csv. Un valor por línea.
+a4vhglh3m.yizhaojingyun.com
 ancientrooftops.de
 beta.gentlesunrise.de
 cedar69.whispersofgoldenlight.de
@@ -10,11 +11,15 @@ forestgolem.de
 gentlesunrise.de
 goldenvisionsforest.de
 granite10.goldenvisionsforest.de
+greenproxysimpleserver.cc
 harmonyofnature.de
 hcenginreering.net
 hjzok.harmonyofnature.de
+ipfs-us.com
 jasper67.sleepingforestmystery.de
 keluar.forestgolem.de
+loginlive.yizhaojingyun.com
+loginms.yizhaojingyun.com
 lunar64.ancientrooftops.de
 morningbreezeflowers.de
 pierce16.forestgolem.de
@@ -26,7 +31,10 @@ shimmeringglow.de
 silverstreetmoon.de
 sleepingforestmagic.de
 sleepingforestmystery.de
+tfgevds.yizhaojingyun.com
 tundra30.chairoftime.de
 vault53.morningbreezeflowers.de
 whispersofgoldenlight.de
+www.yizhaojingyun.com
+yizhaojingyun.com
 zephyr71.silverstreetmoon.de

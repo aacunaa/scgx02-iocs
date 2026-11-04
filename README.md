@@ -1,10 +1,17 @@
-# IOC de SCGX02 / CodeStorm
+# IOC de campañas de phishing AiTM — Raiku Solutions
 
-Indicadores de compromiso de una campaña de **phishing de adversario en el medio (AiTM)** contra cuentas de Microsoft 365. Los publica **Raiku Solutions** a partir de una investigación de respuesta a incidentes en Chile (octubre y noviembre de 2026). **TLP:CLEAR:** se pueden compartir sin restricción.
+Indicadores de compromiso de campañas de **phishing de adversario en el medio (AiTM)** contra cuentas de Microsoft 365. Los publica **Raiku Solutions** a partir de investigaciones de respuesta a incidentes en Chile (octubre y noviembre de 2026). **TLP:CLEAR:** se pueden compartir sin restricción.
+
+| Campaña | Desde | STIX | YARA |
+|---|---|---|---|
+| **SCGX02 / CodeStorm** | octubre de 2026 | [`stix/scgx02.json`](stix/scgx02.json) | [`yara/scgx02.yar`](yara/scgx02.yar) |
+| **RFQ en dos pasos / proxy AiTM** | noviembre de 2026 | [`stix/rfq-aitm.json`](stix/rfq-aitm.json) | [`yara/rfq-aitm.yar`](yara/rfq-aitm.yar) |
+
+El repositorio nació con SCGX02, de ahí su nombre.
 
 *English summary below.*
 
-## La campaña en cinco líneas
+## SCGX02 / CodeStorm en cinco líneas
 
 1. **Entrega:** el correo llega desde la cuenta real de un proveedor comprometido, así que pasa SPF, DKIM y DMARC. El señuelo es una invitación a licitar con un PDF cifrado de una página: una imagen y un enlace oculto.
 2. **Landing:** el enlace lleva a un subdominio con el nombre de la víctima, bajo un dominio base del actor detrás de Cloudflare. Hay un control anti-bots propio («Secure Access Check») o Turnstile.
@@ -12,17 +19,28 @@ Indicadores de compromiso de una campaña de **phishing de adversario en el medi
 4. **Panel:** el panel «SCGX02 PANEL» se publica en `/panel/` de un host con nombre corto y número (`pierce16`, `quill99`, `vault53`…). Todos sirven el mismo HTML: SHA-256 `204a6074…`.
 5. **Después:** inicios de sesión desde la infraestructura del kit y reglas de bandeja que esconden avisos.
 
+## RFQ en dos pasos / proxy AiTM en cinco líneas
+
+1. **Primer contacto:** una solicitud de cotización **sin enlaces ni adjuntos** desde el buzón real de una empresa comprometida. No hay nada que un filtro pueda marcar; solo busca una respuesta.
+2. **Continuación:** cuando la víctima responde, llega un «Re:» desde un dominio que suplanta a una empresa real (con DKIM propio, así que pasa la autenticación), con un enlace «RFQ».
+3. **Redirección:** el enlace empieza en el endpoint `/oauth/authorize` de un sitio legítimo, que con `prompt=none&id_token_hint=dummy` devuelve error y redirige igual al `redirect_uri` del actor, alojado en un sitio comprometido.
+4. **Puerta:** `yizhaojingyun[.]com` decide quién ve el phishing: prueba de trabajo y huella del navegador (`/.verify`), detector de entornos de análisis (`/.detect`), captcha propio (`greenproxysimpleserver[.]cc`) y una trampa para las herramientas de desarrollo (`/.devtools`). A los bots los manda a Stack Overflow o a Google.
+5. **Robo:** un proxy AiTM (`tfgevds.`, `loginlive.` y `loginms.yizhaojingyun[.]com`) reenvía en tiempo real el inicio de sesión de Microsoft y se queda con la sesión aunque haya segundo factor. La misma puerta atiende a otras campañas: es phishing como servicio.
+
 ## Qué hay aquí
 
 | Ruta | Qué es | Para qué |
 |---|---|---|
-| [`IOCS.md`](IOCS.md) | Tabla legible con los valores **desarmados** (`[.]`, `hxxps`), con rol, confianza y estado | Leer y citar en informes |
-| [`feeds/`](feeds) | Un valor por línea, **sin desarmar** | Cargar en el proxy, el DNS, el firewall o el SIEM |
-| [`stix/scgx02.json`](stix/scgx02.json) | Paquete STIX 2.1: una campaña, sus indicadores y las relaciones | MISP, OpenCTI, plataformas TAXII |
-| [`yara/scgx02.yar`](yara/scgx02.yar) | Cinco reglas: el PDF señuelo, el gate de la landing, el loader cifrado, el panel y el JavaScript de la etapa 3 | Cazar en adjuntos, caché de proxy y kits recuperados |
-| [`datos/iocs.csv`](datos/iocs.csv) | La fuente: todo lo demás se genera desde aquí | Proponer cambios |
+| [`IOCS.md`](IOCS.md) | Tabla legible por campaña, con los valores **desarmados** (`[.]`, `hxxps`), con rol, confianza y estado | Leer y citar en informes |
+| [`feeds/`](feeds) | Un valor por línea, **sin desarmar**, de todas las campañas juntas | Cargar en el proxy, el DNS, el firewall o el SIEM |
+| [`stix/`](stix) | Un paquete STIX 2.1 por campaña: la campaña, sus indicadores y las relaciones | MISP, OpenCTI, plataformas TAXII |
+| [`yara/scgx02.yar`](yara/scgx02.yar) | Cinco reglas de SCGX02: el PDF señuelo, el gate de la landing, el loader cifrado, el panel y el JavaScript de la etapa 3 | Cazar en adjuntos, caché de proxy y kits recuperados |
+| [`yara/rfq-aitm.yar`](yara/rfq-aitm.yar) | Tres reglas de la puerta RFQ: la primera visita (prueba de trabajo), la página con captcha y la trampa de herramientas de desarrollo | Cazar en capturas HTTP y caché de proxy |
+| [`datos/iocs.csv`](datos/iocs.csv) | La fuente: todo lo demás se genera desde aquí. La columna `campana` dice a qué campaña pertenece cada IOC | Proponer cambios |
 
 **Las reglas YARA** compilan con YARA 4.5. Se probaron contra las muestras del incidente: detectan el PDF señuelo, el gate de la landing y el loader cifrado. Contra 6.913 archivos limpios de un equipo de trabajo, 502 de ellos PDF, no dieron falsos positivos. La regla del JavaScript de la etapa 3 (v2) no tiene una muestra legible para probarla: el antivirus la bloquea. La regla del panel también salta con un documento que cite «SCGX02 PANEL»: úsela sobre capturas HTTP, no sobre informes.
+
+**Las reglas de la puerta RFQ** se probaron contra las 26 respuestas que sirvió la infraestructura del actor el 3 de noviembre: detectan la primera visita, las seis páginas con captcha y todas las páginas del proxy, porque el kit inyecta la trampa de herramientas de desarrollo en cada página de Microsoft que reescribe. Contra 3.141 archivos limpios de un equipo de trabajo (2.553 JavaScript, 117 HTML, 216 JSON y 210 PDF, entre otros) no dieron falsos positivos.
 
 **Cómo bloquear:** use `feeds/dominios.txt` **e incluya los subdominios** de los dominios base. Las landings usan subdominios nuevos con el nombre de cada víctima, que no se publican. `feeds/dominios_activos.txt` trae solo lo que seguía en pie en la última revalidación.
 
@@ -31,12 +49,15 @@ Indicadores de compromiso de una campaña de **phishing de adversario en el medi
 ## Lo que este repositorio no publica, a propósito
 
 - **Ningún dato de víctimas:** ni los subdominios de las landings (llevan el nombre de la empresa atacada), ni los remitentes, ni los asuntos o identificadores de los correos, ni los sitios legítimos comprometidos que el actor usó de paso. Para bloquear basta el dominio base. Un script rechaza cualquier valor que coincida con una lista local de términos que no se sube.
-- **Direcciones IP:** el actor publica todo detrás de Cloudflare, así que las IP que se ven son del borde de Cloudflare y bloquearlas cortaría sitios legítimos. Tampoco se publican IP residenciales usadas como proxy, porque pueden ser de personas sin relación con el ataque.
+- **Direcciones IP de Cloudflare o de terceros:** las IP del borde de Cloudflare no se publican, porque bloquearlas cortaría sitios legítimos. Tampoco las IP residenciales usadas como proxy ni las de servidores de correo compartidos desde donde se enviaron los correos. Solo se publica la IP de **origen** de un servidor del actor cuando queda expuesta fuera de Cloudflare (`94.26.106.29` en la campaña RFQ): desde ahí el proxy inicia sesión en Microsoft, así que sirve para buscar en los registros de inicio de sesión.
+- **Los buzones comprometidos y los sitios de paso** de la campaña RFQ: son empresas reales, víctimas también. Se publica el dominio que el actor registró para suplantar a una empresa, no la empresa suplantada.
 - **Candidatos sin confirmar:** un dominio entra cuando sirve el kit, usa el panel o comparte su huella, no por parecido.
 
 ## Cómo se obtuvieron y cómo se revalidan
 
-Todo es **pasivo** y no se interactuó con la infraestructura del actor más allá de visitas públicas. Se usó DNS por DNS sobre HTTPS, Certificate Transparency y escaneos de urlscan.io (la visita la hace urlscan, solo con GET) sobre muestras del incidente. Nunca se enviaron credenciales ni POST a los paneles.
+Para SCGX02 todo es **pasivo** y no se interactuó con la infraestructura del actor más allá de visitas públicas. Se usó DNS por DNS sobre HTTPS, Certificate Transparency y escaneos de urlscan.io (la visita la hace urlscan, solo con GET) sobre muestras del incidente. Nunca se enviaron credenciales ni POST a los paneles.
+
+Para la campaña RFQ, además de lo anterior, se recorrió el enlace del incidente con un navegador controlado detrás de un proxy de interceptación, para ver lo que la puerta esconde de urlscan. Las reglas YARA y las rutas salen de esas respuestas.
 
 Cada IOC lleva `estado` y `estado_al`: `activo`, `preparado` (página de prueba sin el kit), `bloqueado` (Cloudflare lo marca como phishing), `caido` o `sin_datos`. **Un dominio caído puede volver:** el actor reutiliza dominios base, así que se recomienda mantener el bloqueo.
 
@@ -51,6 +72,9 @@ Cada IOC lleva `estado` y `estado_al`: `activo`, `preparado` (página de prueba 
 | T1583.001 Adquirir infraestructura: dominios | Dominios base `.de` registrados en tandas |
 | T1583.006 Adquirir infraestructura: servicios web | Buckets de Tencent Cloud, AWS S3, Linode y Azure Blob |
 | T1564.008 Ocultar artefactos: reglas de correo | Reglas de bandeja que mueven y marcan avisos como leídos |
+| T1586.002 Comprometer cuentas: correo | RFQ: el primer contacto sale de buzones reales comprometidos |
+| T1656 Suplantación | RFQ: dominio registrado para hacerse pasar por una empresa real |
+| T1497 Evasión de entornos virtuales y de análisis | RFQ: `/.verify`, `/.detect` y `/.devtools` mandan a los analistas a otro sitio |
 
 ## Contribuir
 
@@ -65,17 +89,21 @@ La integración continua comprueba que los archivos generados coincidan con el C
 
 ## Licencia y aviso
 
-Datos y reglas bajo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es) (cite «Raiku Solutions, IOC de SCGX02 / CodeStorm»). El script bajo licencia MIT. Se entrega **sin garantía:** pruebe antes de bloquear en producción.
+Datos y reglas bajo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es) (cite «Raiku Solutions, IOC de SCGX02 / CodeStorm» o «Raiku Solutions, IOC de la campaña RFQ en dos pasos»). El script bajo licencia MIT. Se entrega **sin garantía:** pruebe antes de bloquear en producción.
 
 ---
 
 ## English summary
 
-IOCs for **SCGX02 / CodeStorm**, an adversary-in-the-middle (AiTM) phishing campaign against Microsoft 365, delivered from compromised supplier mailboxes. The kit uses Cloudflare-fronted `.de` domains, an operator panel branded "SCGX02 PANEL" with a constant HTML hash (`204a6074…`), and the phishing UI hosted on Tencent Cloud COS buckets.
+IOCs for two adversary-in-the-middle (AiTM) phishing campaigns against Microsoft 365:
+
+- **SCGX02 / CodeStorm**, delivered from compromised supplier mailboxes. The kit uses Cloudflare-fronted `.de` domains, an operator panel branded "SCGX02 PANEL" with a constant HTML hash (`204a6074…`), and the phishing UI hosted on Tencent Cloud COS buckets.
+- **Two-step RFQ / AiTM proxy**: a link-free request for quotation from a compromised mailbox, then a follow-up from a lookalike domain whose link abuses an open OAuth redirect. It ends at a phishing-as-a-service gate on `yizhaojingyun[.]com` (proof of work, browser fingerprint, sandbox and devtools detection, own captcha on `greenproxysimpleserver[.]cc`) in front of a real-time Microsoft sign-in proxy.
 
 - `IOCS.md`: defanged, human-readable table with role, confidence and last-known status.
 - `feeds/`: raw one-per-line lists. Block the base domains **including all subdomains**: per-victim landing subdomains are intentionally not published.
-- `stix/scgx02.json`: STIX 2.1 bundle (campaign, indicators, relationships). Marked TLP:WHITE in STIX, which is TLP:CLEAR.
-- `yara/scgx02.yar`: five hunting rules.
+- `feeds/` covers both campaigns; `IOCS.md` and `stix/` are split per campaign (`datos/iocs.csv`, column `campana`).
+- `stix/scgx02.json`, `stix/rfq-aitm.json`: STIX 2.1 bundles (campaign, indicators, relationships). Marked TLP:WHITE in STIX, which is TLP:CLEAR.
+- `yara/scgx02.yar` (five rules) and `yara/rfq-aitm.yar` (three rules for the RFQ gate).
 
 Collection was passive only (DoH, Certificate Transparency, urlscan.io). No victim data, no Cloudflare edge IPs and no unconfirmed lookalikes are published. Licensed CC BY 4.0 (data and rules) and MIT (script).

@@ -1,4 +1,4 @@
-# SCGX02 / CodeStorm — hashes SHA-256 de archivos. TLP:CLEAR. Versión 2026-11-01. Fuente: datos/iocs.csv. Un valor por línea.
+# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM — hashes SHA-256 de archivos. TLP:CLEAR. Versión 2026-11-03. Fuente: datos/iocs.csv. Un valor por línea.
 17299201e289b01ae7ba077ba9a56a4a8f810613c9f6476fe16df945906d899a
 204a6074190b83402459e7402d13451443b72d4868eb4975d4dfffb420b4e57a
 965491e2aa913bcee12580f20f16f3f70d9c26b3b31cb7ade46a742758e8903a

@@ -1,4 +1,5 @@
-# SCGX02 / CodeStorm — dominios y hosts del actor (bloquear también los subdominios de los dominios base). TLP:CLEAR. Versión 2026-11-01. Fuente: datos/iocs.csv. Un valor por línea.
+# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM — dominios y hosts del actor (bloquear también los subdominios de los dominios base). TLP:CLEAR. Versión 2026-11-03. Fuente: datos/iocs.csv. Un valor por línea.
+a4vhglh3m.yizhaojingyun.com
 alladokument.ancientrooftops.de
 ancientrooftops.de
 beta.gentlesunrise.de
@@ -14,14 +15,18 @@ forestgolem.de
 gentlesunrise.de
 goldenvisionsforest.de
 granite10.goldenvisionsforest.de
+greenproxysimpleserver.cc
 harmonyofnature.de
 hcenginreering.net
 hfkme.blob.core.windows.net
 hjzok.harmonyofnature.de
 htgftyhy6565tt54rr43-1457164341.cos.na-siliconvalley.myqcloud.com
+ipfs-us.com
 jasper67.sleepingforestmystery.de
 keluar.forestgolem.de
 krypton85-6f10-1483637648.cos.na-siliconvalley.myqcloud.com
+loginlive.yizhaojingyun.com
+loginms.yizhaojingyun.com
 lunar64-9eb9-1483637648.cos.na-siliconvalley.myqcloud.com
 lunar64.ancientrooftops.de
 morningbreezeflowers.de
@@ -48,11 +53,14 @@ silverstreetmoon.de
 sleepingforestmagic.de
 sleepingforestmystery.de
 softlycloaked.de
+tfgevds.yizhaojingyun.com
 tundra30.chairoftime.de
 vault53-d309-1497982805.cos.na-siliconvalley.myqcloud.com
 vault53.morningbreezeflowers.de
 viewdocu.ancientrooftops.de
 whispersofgoldenlight.de
+www.yizhaojingyun.com
+yizhaojingyun.com
 zephyr71-4bd9-1483637648.cos.na-siliconvalley.myqcloud.com
 zephyr71.silverstreetmoon.de
 zgpvvyxjngmpbowhwdtm.morningmystery.de

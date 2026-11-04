@@ -1,4 +1,5 @@
-# SCGX02 / CodeStorm — URLs. TLP:CLEAR. Versión 2026-11-01. Fuente: datos/iocs.csv. Un valor por línea.
+# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM — URLs. TLP:CLEAR. Versión 2026-11-03. Fuente: datos/iocs.csv. Un valor por línea.
+https://a4vhglh3m.yizhaojingyun.com/v1df2lmz-gpl5fqfab2-vpd6dfbxiwgsg-8iyxionbd8wsj
 https://flyn.co/pKaYZP
 https://hfkme.blob.core.windows.net/hfkme/hfk.html
 https://hjzok.harmonyofnature.de/capt.php

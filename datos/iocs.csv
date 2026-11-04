@@ -1,79 +1,95 @@
-tipo,valor,rol,confianza,visto_primero,estado,estado_al,notas
-dominio,seatofpresence.de,dominio base del kit (campaña de octubre),alta,2026-10-07,caido,2026-11-01,dominio estacionado; el panel raven81 cayó
-dominio,gentlesunrise.de,dominio base del kit,alta,2026-10-16,activo,2026-11-01,aloja el panel beta y una landing tras Turnstile
-dominio,shimmeringglow.de,dominio base del kit,alta,2026-10-07,activo,2026-11-01,panel quill99
-dominio,comrandjet.com,dominio base de landings,alta,2026-10-14,sin_datos,2026-11-01,usaba el panel quill99
-dominio,morningmystery.de,dominio base del kit,alta,2026-10-16,caido,2026-11-01,panel quartz84
-dominio,preparednessmatters.de,dominio base del kit,alta,2026-10-16,activo,2026-11-01,panel pierce35
-dominio,whispersofgoldenlight.de,dominio base del kit,alta,2026-10-16,activo,2026-11-01,panel cedar69
-dominio,silverstreetmoon.de,dominio base del kit,alta,2026-10-16,activo,2026-11-01,panel zephyr71
-dominio,harmonyofnature.de,dominio base del kit (versión 1; agosto de 2026),alta,2026-10-18,bloqueado,2026-11-01,Cloudflare lo marca como phishing
-dominio,softlycloaked.de,dominio base del kit (septiembre de 2026),alta,2026-10-18,caido,2026-11-01,
-dominio,chairoftime.de,dominio base del kit,alta,2026-10-19,activo,2026-11-01,panel tundra30
-dominio,ancientrooftops.de,dominio base del kit (señuelos en sueco),alta,2026-10-19,bloqueado,2026-11-01,panel lunar64 bloqueado por Cloudflare
-dominio,morningbreezeflowers.de,dominio base del kit,alta,2026-10-22,activo,2026-11-01,panel vault53
-dominio,forestgolem.de,dominio base del kit,alta,2026-10-22,activo,2026-11-01,panel pierce16
-dominio,essentialdocstorage.de,dominio base del kit,alta,2026-10-22,activo,2026-11-01,panel pierce99
-dominio,goldenvisionsforest.de,dominio base del kit,alta,2026-10-22,activo,2026-11-01,panel granite10
-dominio,sleepingforestmystery.de,dominio base del kit,alta,2026-10-22,activo,2026-11-01,panel jasper67
-dominio,sleepingforestmagic.de,dominio base preparado,media,2026-10-20,preparado,2026-11-01,página de prueba de AlmaLinux
-dominio,eagerlyshowingoff.de,dominio base preparado,media,2026-10-20,sin_datos,2026-11-01,página de prueba de AlmaLinux
-dominio,hcenginreering.net,dominio base de landings,alta,2026-10-30,activo,2026-11-01,sus landings llaman al panel quill99
-host,raven81.seatofpresence.de,panel del operador y robo de credenciales,alta,2026-10-16,caido,2026-11-01,/panel/ y /google.php
-host,quill99.shimmeringglow.de,panel del operador,alta,2026-10-16,activo,2026-11-01,mismo HTML de panel (204a6074…)
-host,quartz84.morningmystery.de,panel del operador,alta,2026-10-16,caido,2026-11-01,
-host,pierce35.preparednessmatters.de,panel del operador,alta,2026-10-16,activo,2026-11-01,mismo HTML de panel
-host,cedar69.whispersofgoldenlight.de,panel del operador,alta,2026-10-16,activo,2026-11-01,mismo HTML de panel
-host,zephyr71.silverstreetmoon.de,panel del operador,alta,2026-10-16,activo,2026-11-01,mismo HTML de panel
-host,hjzok.harmonyofnature.de,panel del kit (versión 1),alta,2026-10-18,bloqueado,2026-11-01,/capt.php
-host,tundra30.chairoftime.de,panel del operador,alta,2026-10-19,activo,2026-11-01,mismo HTML de panel
-host,lunar64.ancientrooftops.de,panel del operador,alta,2026-10-19,bloqueado,2026-11-01,
-host,beta.gentlesunrise.de,panel del operador,alta,2026-10-16,activo,2026-11-01,mismo HTML de panel; desde el 1-nov la raíz es una landing tras Turnstile
-host,vault53.morningbreezeflowers.de,panel del operador,alta,2026-10-22,activo,2026-11-01,mismo HTML de panel
-host,pierce16.forestgolem.de,panel del operador,alta,2026-10-22,activo,2026-11-01,mismo HTML de panel
-host,pierce99.essentialdocstorage.de,panel del operador,alta,2026-10-22,activo,2026-11-01,mismo HTML de panel
-host,granite10.goldenvisionsforest.de,panel del operador,alta,2026-10-22,activo,2026-11-01,mismo HTML de panel
-host,jasper67.sleepingforestmystery.de,panel del operador,alta,2026-10-22,activo,2026-11-01,mismo HTML de panel
-host,keluar.forestgolem.de,host preparado,media,2026-10-29,preparado,2026-11-01,página de prueba de AlmaLinux
-host,enrollments.sleepingforestmagic.de,host preparado,media,2026-10-26,preparado,2026-11-01,página de prueba de AlmaLinux
-host,fileviewall.ancientrooftops.de,landing,alta,2026-10-26,bloqueado,2026-11-01,
-host,sakrafiler.ancientrooftops.de,landing (señuelo en sueco),alta,2026-10-19,sin_datos,2026-11-01,
-host,alladokument.ancientrooftops.de,landing (señuelo en sueco),alta,2026-10-19,sin_datos,2026-11-01,
-host,viewdocu.ancientrooftops.de,landing,alta,2026-10-19,sin_datos,2026-11-01,
-host,puvzivjkgpjaqnpjlkyb.softlycloaked.de,landing,alta,2026-10-18,caido,2026-11-01,
-host,zgpvvyxjngmpbowhwdtm.morningmystery.de,landing,alta,2026-10-16,caido,2026-11-01,
-host,raven81-32b7-1497982805.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS con la interfaz de phishing (etapa 3),alta,2026-10-16,sin_datos,2026-11-01,
-host,quill99-55d7-1497982805.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS (etapa 3),alta,2026-10-16,sin_datos,2026-11-01,
-host,quartz84-bd54-1497982805.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS (etapa 3),alta,2026-10-16,sin_datos,2026-11-01,
-host,vault53-d309-1497982805.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS (etapa 3),alta,2026-10-22,sin_datos,2026-11-01,
-host,cdstyr546tt54re5ty6y5-1457164341.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS (versión 1),alta,2026-10-18,sin_datos,2026-11-01,
-host,htgftyhy6565tt54rr43-1457164341.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS,alta,2026-10-18,sin_datos,2026-11-01,
-host,zephyr71-4bd9-1483637648.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS,alta,2026-10-18,caido,2026-11-01,dado de baja por Tencent
-host,pierce99-e28e-1483637648.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS,alta,2026-10-22,sin_datos,2026-11-01,
-host,krypton85-6f10-1483637648.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS,alta,2026-10-18,sin_datos,2026-11-01,
-host,lunar64-9eb9-1483637648.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS,alta,2026-10-22,sin_datos,2026-11-01,
-host,public-resource-4896531063069088.s3.ap-south-1.amazonaws.com,salto de redirección (AWS S3),alta,2026-10-16,sin_datos,2026-11-01,
-host,msoff-standard-cran-v557br-com.id-cgk-1.linodeobjects.com,página de phishing (Linode Object Storage),alta,2026-10-16,sin_datos,2026-11-01,
-host,hfkme.blob.core.windows.net,salto de redirección (Azure Blob),alta,2026-10-18,sin_datos,2026-11-01,
-host,onffline0901.survey-terminaloffviceadmimsurrond.cloud,salto de entrega (señuelo «Adobe Acrobat»),media,2026-10-13,sin_datos,2026-11-01,
-url,https://raven81.seatofpresence.de/google.php,robo de credenciales en tiempo real,alta,2026-10-16,caido,2026-11-01,
-url,https://raven81.seatofpresence.de/panel/?api&visit,contador de visitas del panel,alta,2026-10-16,caido,2026-11-01,
-url,https://quill99.shimmeringglow.de/panel/?api&visit,contador de visitas del panel,alta,2026-10-30,activo,2026-11-01,lo llaman las landings de hcenginreering.net
-url,https://hjzok.harmonyofnature.de/capt.php,robo de credenciales (versión 1),alta,2026-10-18,bloqueado,2026-11-01,
-url,https://hfkme.blob.core.windows.net/hfkme/hfk.html,salto de redirección,alta,2026-10-18,sin_datos,2026-11-01,
-url,https://flyn.co/pKaYZP,acortador hacia landings de lunar64,media,2026-10-12,sin_datos,2026-11-01,
-sha256,965491e2aa913bcee12580f20f16f3f70d9c26b3b31cb7ade46a742758e8903a,PDF señuelo cifrado,alta,2026-10-16,,,una página con una imagen y un enlace oculto
-md5,c09b8641a009226432dc9a00d75a09d6,PDF señuelo cifrado,alta,2026-10-16,,,
-sha256,17299201e289b01ae7ba077ba9a56a4a8f810613c9f6476fe16df945906d899a,JavaScript del kit (etapa 3; versión 1),alta,2026-10-18,,,
-sha256,aa7351b192f1e577e2033e114155d9ce520762e1abd19a4b3b777b4483ffbb4c,JavaScript del kit (etapa 3; versión 2),alta,2026-10-18,,,
-sha256,204a6074190b83402459e7402d13451443b72d4868eb4975d4dfffb420b4e57a,HTML del panel /panel/ («SCGX02 PANEL»),alta,2026-10-19,,,buscar en urlscan con hash:<valor> para encontrar paneles
-x509-sha256,d19763e2452f2f684756a182bf26b5e2bde07879fecc3f8c2cfc10ade4c1532b,certificado comodín Sectigo *.seatofpresence.de,media,2026-10-16,,,probablemente en el origen
-x509-sha256,26496f25f0062e7cf05b833dcdac92192114ad4403dc746794348af9c17eac35,certificado comodín Sectigo *.chairoftime.de,media,2026-10-19,,,
-x509-sha256,a75f412779e733cd66987f482688a36bf354fa590746614f0ddbc430095db944,certificado comodín Sectigo *.softlycloaked.de,media,2026-10-18,,,
-x509-sha256,055808552ea0e0303ea1e9847646df891f073a194f9c7e249b7067c1e7be6242,certificado comodín Sectigo *.softlycloaked.de,media,2026-10-18,,,
-cadena,SCGX02 PANEL,marca del panel del operador,alta,2026-10-16,,,
-cadena,wfrsx_0x3197,identificador del ofuscador del kit (versión 2),alta,2026-10-18,,,
-cadena,e20e2de7dca648d8846620b76a7849c5,token de Cloudflare Web Analytics compartido por landings y panel,alta,2026-10-16,,,
-cadena,1497982805,APPID de Tencent Cloud de los buckets,alta,2026-10-16,,,
-cadena,1483637648,APPID de Tencent Cloud de los buckets,alta,2026-10-18,,,
-cadena,1457164341,APPID de Tencent Cloud de los buckets (versión 1),alta,2026-10-18,,,
+campana,tipo,valor,rol,confianza,visto_primero,estado,estado_al,notas
+scgx02,dominio,seatofpresence.de,dominio base del kit (campaña de octubre),alta,2026-10-07,caido,2026-11-01,dominio estacionado; el panel raven81 cayó
+scgx02,dominio,gentlesunrise.de,dominio base del kit,alta,2026-10-16,activo,2026-11-01,aloja el panel beta y una landing tras Turnstile
+scgx02,dominio,shimmeringglow.de,dominio base del kit,alta,2026-10-07,activo,2026-11-01,panel quill99
+scgx02,dominio,comrandjet.com,dominio base de landings,alta,2026-10-14,sin_datos,2026-11-01,usaba el panel quill99
+scgx02,dominio,morningmystery.de,dominio base del kit,alta,2026-10-16,caido,2026-11-01,panel quartz84
+scgx02,dominio,preparednessmatters.de,dominio base del kit,alta,2026-10-16,activo,2026-11-01,panel pierce35
+scgx02,dominio,whispersofgoldenlight.de,dominio base del kit,alta,2026-10-16,activo,2026-11-01,panel cedar69
+scgx02,dominio,silverstreetmoon.de,dominio base del kit,alta,2026-10-16,activo,2026-11-01,panel zephyr71
+scgx02,dominio,harmonyofnature.de,dominio base del kit (versión 1; agosto de 2026),alta,2026-10-18,bloqueado,2026-11-01,Cloudflare lo marca como phishing
+scgx02,dominio,softlycloaked.de,dominio base del kit (septiembre de 2026),alta,2026-10-18,caido,2026-11-01,
+scgx02,dominio,chairoftime.de,dominio base del kit,alta,2026-10-19,activo,2026-11-01,panel tundra30
+scgx02,dominio,ancientrooftops.de,dominio base del kit (señuelos en sueco),alta,2026-10-19,bloqueado,2026-11-01,panel lunar64 bloqueado por Cloudflare
+scgx02,dominio,morningbreezeflowers.de,dominio base del kit,alta,2026-10-22,activo,2026-11-01,panel vault53
+scgx02,dominio,forestgolem.de,dominio base del kit,alta,2026-10-22,activo,2026-11-01,panel pierce16
+scgx02,dominio,essentialdocstorage.de,dominio base del kit,alta,2026-10-22,activo,2026-11-01,panel pierce99
+scgx02,dominio,goldenvisionsforest.de,dominio base del kit,alta,2026-10-22,activo,2026-11-01,panel granite10
+scgx02,dominio,sleepingforestmystery.de,dominio base del kit,alta,2026-10-22,activo,2026-11-01,panel jasper67
+scgx02,dominio,sleepingforestmagic.de,dominio base preparado,media,2026-10-20,preparado,2026-11-01,página de prueba de AlmaLinux
+scgx02,dominio,eagerlyshowingoff.de,dominio base preparado,media,2026-10-20,sin_datos,2026-11-01,página de prueba de AlmaLinux
+scgx02,dominio,hcenginreering.net,dominio base de landings,alta,2026-10-30,activo,2026-11-01,sus landings llaman al panel quill99
+scgx02,host,raven81.seatofpresence.de,panel del operador y robo de credenciales,alta,2026-10-16,caido,2026-11-01,/panel/ y /google.php
+scgx02,host,quill99.shimmeringglow.de,panel del operador,alta,2026-10-16,activo,2026-11-01,mismo HTML de panel (204a6074…)
+scgx02,host,quartz84.morningmystery.de,panel del operador,alta,2026-10-16,caido,2026-11-01,
+scgx02,host,pierce35.preparednessmatters.de,panel del operador,alta,2026-10-16,activo,2026-11-01,mismo HTML de panel
+scgx02,host,cedar69.whispersofgoldenlight.de,panel del operador,alta,2026-10-16,activo,2026-11-01,mismo HTML de panel
+scgx02,host,zephyr71.silverstreetmoon.de,panel del operador,alta,2026-10-16,activo,2026-11-01,mismo HTML de panel
+scgx02,host,hjzok.harmonyofnature.de,panel del kit (versión 1),alta,2026-10-18,bloqueado,2026-11-01,/capt.php
+scgx02,host,tundra30.chairoftime.de,panel del operador,alta,2026-10-19,activo,2026-11-01,mismo HTML de panel
+scgx02,host,lunar64.ancientrooftops.de,panel del operador,alta,2026-10-19,bloqueado,2026-11-01,
+scgx02,host,beta.gentlesunrise.de,panel del operador,alta,2026-10-16,activo,2026-11-01,mismo HTML de panel; desde el 1-nov la raíz es una landing tras Turnstile
+scgx02,host,vault53.morningbreezeflowers.de,panel del operador,alta,2026-10-22,activo,2026-11-01,mismo HTML de panel
+scgx02,host,pierce16.forestgolem.de,panel del operador,alta,2026-10-22,activo,2026-11-01,mismo HTML de panel
+scgx02,host,pierce99.essentialdocstorage.de,panel del operador,alta,2026-10-22,activo,2026-11-01,mismo HTML de panel
+scgx02,host,granite10.goldenvisionsforest.de,panel del operador,alta,2026-10-22,activo,2026-11-01,mismo HTML de panel
+scgx02,host,jasper67.sleepingforestmystery.de,panel del operador,alta,2026-10-22,activo,2026-11-01,mismo HTML de panel
+scgx02,host,keluar.forestgolem.de,host preparado,media,2026-10-29,preparado,2026-11-01,página de prueba de AlmaLinux
+scgx02,host,enrollments.sleepingforestmagic.de,host preparado,media,2026-10-26,preparado,2026-11-01,página de prueba de AlmaLinux
+scgx02,host,fileviewall.ancientrooftops.de,landing,alta,2026-10-26,bloqueado,2026-11-01,
+scgx02,host,sakrafiler.ancientrooftops.de,landing (señuelo en sueco),alta,2026-10-19,sin_datos,2026-11-01,
+scgx02,host,alladokument.ancientrooftops.de,landing (señuelo en sueco),alta,2026-10-19,sin_datos,2026-11-01,
+scgx02,host,viewdocu.ancientrooftops.de,landing,alta,2026-10-19,sin_datos,2026-11-01,
+scgx02,host,puvzivjkgpjaqnpjlkyb.softlycloaked.de,landing,alta,2026-10-18,caido,2026-11-01,
+scgx02,host,zgpvvyxjngmpbowhwdtm.morningmystery.de,landing,alta,2026-10-16,caido,2026-11-01,
+scgx02,host,raven81-32b7-1497982805.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS con la interfaz de phishing (etapa 3),alta,2026-10-16,sin_datos,2026-11-01,
+scgx02,host,quill99-55d7-1497982805.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS (etapa 3),alta,2026-10-16,sin_datos,2026-11-01,
+scgx02,host,quartz84-bd54-1497982805.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS (etapa 3),alta,2026-10-16,sin_datos,2026-11-01,
+scgx02,host,vault53-d309-1497982805.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS (etapa 3),alta,2026-10-22,sin_datos,2026-11-01,
+scgx02,host,cdstyr546tt54re5ty6y5-1457164341.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS (versión 1),alta,2026-10-18,sin_datos,2026-11-01,
+scgx02,host,htgftyhy6565tt54rr43-1457164341.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS,alta,2026-10-18,sin_datos,2026-11-01,
+scgx02,host,zephyr71-4bd9-1483637648.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS,alta,2026-10-18,caido,2026-11-01,dado de baja por Tencent
+scgx02,host,pierce99-e28e-1483637648.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS,alta,2026-10-22,sin_datos,2026-11-01,
+scgx02,host,krypton85-6f10-1483637648.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS,alta,2026-10-18,sin_datos,2026-11-01,
+scgx02,host,lunar64-9eb9-1483637648.cos.na-siliconvalley.myqcloud.com,bucket de Tencent COS,alta,2026-10-22,sin_datos,2026-11-01,
+scgx02,host,public-resource-4896531063069088.s3.ap-south-1.amazonaws.com,salto de redirección (AWS S3),alta,2026-10-16,sin_datos,2026-11-01,
+scgx02,host,msoff-standard-cran-v557br-com.id-cgk-1.linodeobjects.com,página de phishing (Linode Object Storage),alta,2026-10-16,sin_datos,2026-11-01,
+scgx02,host,hfkme.blob.core.windows.net,salto de redirección (Azure Blob),alta,2026-10-18,sin_datos,2026-11-01,
+scgx02,host,onffline0901.survey-terminaloffviceadmimsurrond.cloud,salto de entrega (señuelo «Adobe Acrobat»),media,2026-10-13,sin_datos,2026-11-01,
+scgx02,url,https://raven81.seatofpresence.de/google.php,robo de credenciales en tiempo real,alta,2026-10-16,caido,2026-11-01,
+scgx02,url,https://raven81.seatofpresence.de/panel/?api&visit,contador de visitas del panel,alta,2026-10-16,caido,2026-11-01,
+scgx02,url,https://quill99.shimmeringglow.de/panel/?api&visit,contador de visitas del panel,alta,2026-10-30,activo,2026-11-01,lo llaman las landings de hcenginreering.net
+scgx02,url,https://hjzok.harmonyofnature.de/capt.php,robo de credenciales (versión 1),alta,2026-10-18,bloqueado,2026-11-01,
+scgx02,url,https://hfkme.blob.core.windows.net/hfkme/hfk.html,salto de redirección,alta,2026-10-18,sin_datos,2026-11-01,
+scgx02,url,https://flyn.co/pKaYZP,acortador hacia landings de lunar64,media,2026-10-12,sin_datos,2026-11-01,
+scgx02,sha256,965491e2aa913bcee12580f20f16f3f70d9c26b3b31cb7ade46a742758e8903a,PDF señuelo cifrado,alta,2026-10-16,,,una página con una imagen y un enlace oculto
+scgx02,md5,c09b8641a009226432dc9a00d75a09d6,PDF señuelo cifrado,alta,2026-10-16,,,
+scgx02,sha256,17299201e289b01ae7ba077ba9a56a4a8f810613c9f6476fe16df945906d899a,JavaScript del kit (etapa 3; versión 1),alta,2026-10-18,,,
+scgx02,sha256,aa7351b192f1e577e2033e114155d9ce520762e1abd19a4b3b777b4483ffbb4c,JavaScript del kit (etapa 3; versión 2),alta,2026-10-18,,,
+scgx02,sha256,204a6074190b83402459e7402d13451443b72d4868eb4975d4dfffb420b4e57a,HTML del panel /panel/ («SCGX02 PANEL»),alta,2026-10-19,,,buscar en urlscan con hash:<valor> para encontrar paneles
+scgx02,x509-sha256,d19763e2452f2f684756a182bf26b5e2bde07879fecc3f8c2cfc10ade4c1532b,certificado comodín Sectigo *.seatofpresence.de,media,2026-10-16,,,probablemente en el origen
+scgx02,x509-sha256,26496f25f0062e7cf05b833dcdac92192114ad4403dc746794348af9c17eac35,certificado comodín Sectigo *.chairoftime.de,media,2026-10-19,,,
+scgx02,x509-sha256,a75f412779e733cd66987f482688a36bf354fa590746614f0ddbc430095db944,certificado comodín Sectigo *.softlycloaked.de,media,2026-10-18,,,
+scgx02,x509-sha256,055808552ea0e0303ea1e9847646df891f073a194f9c7e249b7067c1e7be6242,certificado comodín Sectigo *.softlycloaked.de,media,2026-10-18,,,
+scgx02,cadena,SCGX02 PANEL,marca del panel del operador,alta,2026-10-16,,,
+scgx02,cadena,wfrsx_0x3197,identificador del ofuscador del kit (versión 2),alta,2026-10-18,,,
+scgx02,cadena,e20e2de7dca648d8846620b76a7849c5,token de Cloudflare Web Analytics compartido por landings y panel,alta,2026-10-16,,,
+scgx02,cadena,1497982805,APPID de Tencent Cloud de los buckets,alta,2026-10-16,,,
+scgx02,cadena,1483637648,APPID de Tencent Cloud de los buckets,alta,2026-10-18,,,
+scgx02,cadena,1457164341,APPID de Tencent Cloud de los buckets (versión 1),alta,2026-10-18,,,
+rfq-aitm,dominio,yizhaojingyun.com,dominio base de la puerta y del proxy AiTM,alta,2026-11-03,activo,2026-11-03,registrado el 2026-08-24 (NiceNIC); DNS en Cloudflare pero con el registro A apuntando al origen; certificado desde el 2026-09-07; atiende a varias campañas
+rfq-aitm,dominio,greenproxysimpleserver.cc,captcha propio del kit,alta,2026-11-03,activo,2026-11-03,servicio en el puerto 8443 detrás de Cloudflare: /captcha/api y /captcha/verify (prueba de trabajo SHA-256)
+rfq-aitm,dominio,ipfs-us.com,dominio que suplanta a una empresa estadounidense de financiamiento de primas,alta,2026-11-03,activo,2026-11-03,registrado el 2026-05-18 (NameSilo); correo en Google Workspace con DKIM propio y sin DMARC; envía la continuación con el enlace
+rfq-aitm,host,a4vhglh3m.yizhaojingyun.com,puerta anti-análisis (sistema de distribución de tráfico),alta,2026-11-03,activo,2026-11-03,"/.verify, /.detect y /.devtools; los bots terminan en stackoverflow.com o google.com"
+rfq-aitm,host,www.yizhaojingyun.com,salto con token de un solo uso hacia el proxy,alta,2026-11-03,activo,2026-11-03,rutas /p/<token>
+rfq-aitm,host,tfgevds.yizhaojingyun.com,proxy AiTM del inicio de sesión de Microsoft,alta,2026-11-03,activo,2026-11-03,"reenvía usuario, contraseña y cookies de sesión a Entra ID en tiempo real"
+rfq-aitm,host,loginlive.yizhaojingyun.com,reflejo de login.live.com,alta,2026-11-03,activo,2026-11-03,sirve /Me.htm
+rfq-aitm,host,loginms.yizhaojingyun.com,reflejo de login.microsoft.com,alta,2026-11-03,activo,2026-11-03,sirve /.well-known/webauthn con los orígenes del proxy
+rfq-aitm,url,https://a4vhglh3m.yizhaojingyun.com/v1df2lmz-gpl5fqfab2-vpd6dfbxiwgsg-8iyxionbd8wsj,entrada de la puerta usada en la campaña,alta,2026-11-03,activo,2026-11-03,"genérica, sin el correo de la víctima; el kit acepta el correo en #correo, ?email= o ?e="
+rfq-aitm,ipv4,94.26.106.29,origen de yizhaojingyun.com (fuera de Cloudflare),alta,2026-11-03,activo,2026-11-03,hosting Techties (Bulgaria) con IP alemana; desde aquí el proxy inicia sesión en Microsoft: buscarla en los inicios de sesión de Entra ID
+rfq-aitm,cadena,/.verify,ruta POST de la puerta: prueba de trabajo y huella del navegador,alta,2026-11-03,,,"cuerpo JSON con challenge_id, solution, sig_score, sig_flags, fp, tz, tz_off, hc y dm"
+rfq-aitm,cadena,/.detect,ruta POST del detector de entornos de análisis,alta,2026-11-03,,,"cuerpo JSON con type ""sandbox"", score, rs, url y ent_count"
+rfq-aitm,cadena,/.devtools,ruta POST que avisa si se abren las herramientas de desarrollo,alta,2026-11-03,,,oculta la página y redirige a google.com
+rfq-aitm,cadena,_vfy,cookie de la puerta,media,2026-11-03,,,válida 7 días en el dominio base
+rfq-aitm,cadena,24600978-7df2-44bc-9a8c-a18c95ca6886,sitekey de hCaptcha configurada en el kit,media,2026-11-03,,,hCaptcha venía apagado (USE_HCAPTCHA = false); sirve para relacionar otras campañas del mismo kit
+rfq-aitm,cadena,prompt=none&id_token_hint=dummy,abuso de redirección OAuth abierta en el enlace del correo,media,2026-11-03,,,un endpoint /oauth/authorize legítimo devuelve error y redirige igual al redirect_uri del actor

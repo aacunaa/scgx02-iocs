@@ -1,4 +1,4 @@
-# SCGX02 / CodeStorm — huellas SHA-256 de certificados. TLP:CLEAR. Versión 2026-11-01. Fuente: datos/iocs.csv. Un valor por línea.
+# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM — huellas SHA-256 de certificados. TLP:CLEAR. Versión 2026-11-03. Fuente: datos/iocs.csv. Un valor por línea.
 055808552ea0e0303ea1e9847646df891f073a194f9c7e249b7067c1e7be6242
 26496f25f0062e7cf05b833dcdac92192114ad4403dc746794348af9c17eac35
 a75f412779e733cd66987f482688a36bf354fa590746614f0ddbc430095db944

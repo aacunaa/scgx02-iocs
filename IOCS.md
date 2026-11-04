@@ -1,9 +1,11 @@
-# IOC de SCGX02 / CodeStorm (versión 2026-11-01)
+# IOC publicados por Raiku Solutions (versión 2026-11-03)
 
 Tabla generada desde `datos/iocs.csv` con `scripts/construir.py`. Los valores están desarmados (`[.]`, `hxxps`) para que no se puedan abrir por error.
-Los valores tal cual, para cargar en un bloqueo, están en `feeds/`, y el paquete STIX 2.1 en `stix/scgx02.json`.
+Los valores tal cual, para cargar en un bloqueo, están en `feeds/` (todas las campañas juntas), y un paquete STIX 2.1 por campaña en `stix/`.
 
-## Dominios base (20)
+## SCGX02 / CodeStorm (versión 2026-11-01, `stix/scgx02.json`)
+
+### Dominios base (20)
 
 | Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
 |---|---|---|---|---|---|
@@ -28,7 +30,7 @@ Los valores tal cual, para cargar en un bloqueo, están en `feeds/`, y el paquet
 | `sleepingforestmagic[.]de` | dominio base preparado | media | 2026-10-20 | preparado (2026-11-01) | página de prueba de AlmaLinux |
 | `softlycloaked[.]de` | dominio base del kit (septiembre de 2026) | alta | 2026-10-18 | caido (2026-11-01) |  |
 
-## Hosts (37)
+### Hosts (37)
 
 | Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
 |---|---|---|---|---|---|
@@ -70,7 +72,7 @@ Los valores tal cual, para cargar en un bloqueo, están en `feeds/`, y el paquet
 | `zephyr71-4bd9-1483637648[.]cos[.]na-siliconvalley[.]myqcloud[.]com` | bucket de Tencent COS | alta | 2026-10-18 | caido (2026-11-01) | dado de baja por Tencent |
 | `zgpvvyxjngmpbowhwdtm[.]morningmystery[.]de` | landing | alta | 2026-10-16 | caido (2026-11-01) |  |
 
-## URLs (6)
+### URLs (6)
 
 | Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
 |---|---|---|---|---|---|
@@ -81,7 +83,7 @@ Los valores tal cual, para cargar en un bloqueo, están en `feeds/`, y el paquet
 | `hxxps://raven81[.]seatofpresence[.]de/google.php` | robo de credenciales en tiempo real | alta | 2026-10-16 | caido (2026-11-01) |  |
 | `hxxps://raven81[.]seatofpresence[.]de/panel/?api&visit` | contador de visitas del panel | alta | 2026-10-16 | caido (2026-11-01) |  |
 
-## Archivos (SHA-256) (4)
+### Archivos (SHA-256) (4)
 
 | Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
 |---|---|---|---|---|---|
@@ -90,13 +92,13 @@ Los valores tal cual, para cargar en un bloqueo, están en `feeds/`, y el paquet
 | `965491e2aa913bcee12580f20f16f3f70d9c26b3b31cb7ade46a742758e8903a` | PDF señuelo cifrado | alta | 2026-10-16 | — | una página con una imagen y un enlace oculto |
 | `aa7351b192f1e577e2033e114155d9ce520762e1abd19a4b3b777b4483ffbb4c` | JavaScript del kit (etapa 3; versión 2) | alta | 2026-10-18 | — |  |
 
-## Archivos (MD5) (1)
+### Archivos (MD5) (1)
 
 | Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
 |---|---|---|---|---|---|
 | `c09b8641a009226432dc9a00d75a09d6` | PDF señuelo cifrado | alta | 2026-10-16 | — |  |
 
-## Certificados (SHA-256) (4)
+### Certificados (SHA-256) (4)
 
 | Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
 |---|---|---|---|---|---|
@@ -105,7 +107,7 @@ Los valores tal cual, para cargar en un bloqueo, están en `feeds/`, y el paquet
 | `a75f412779e733cd66987f482688a36bf354fa590746614f0ddbc430095db944` | certificado comodín Sectigo *.softlycloaked.de | media | 2026-10-18 | — |  |
 | `d19763e2452f2f684756a182bf26b5e2bde07879fecc3f8c2cfc10ade4c1532b` | certificado comodín Sectigo *.seatofpresence.de | media | 2026-10-16 | — | probablemente en el origen |
 
-## Cadenas para cazar (6)
+### Cadenas para cazar (6)
 
 | Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
 |---|---|---|---|---|---|
@@ -115,3 +117,46 @@ Los valores tal cual, para cargar en un bloqueo, están en `feeds/`, y el paquet
 | `SCGX02 PANEL` | marca del panel del operador | alta | 2026-10-16 | — |  |
 | `e20e2de7dca648d8846620b76a7849c5` | token de Cloudflare Web Analytics compartido por landings y panel | alta | 2026-10-16 | — |  |
 | `wfrsx_0x3197` | identificador del ofuscador del kit (versión 2) | alta | 2026-10-18 | — |  |
+
+## RFQ en dos pasos / proxy AiTM (versión 2026-11-03, `stix/rfq-aitm.json`)
+
+### Dominios base (3)
+
+| Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
+|---|---|---|---|---|---|
+| `greenproxysimpleserver[.]cc` | captcha propio del kit | alta | 2026-11-03 | activo (2026-11-03) | servicio en el puerto 8443 detrás de Cloudflare: /captcha/api y /captcha/verify (prueba de trabajo SHA-256) |
+| `ipfs-us[.]com` | dominio que suplanta a una empresa estadounidense de financiamiento de primas | alta | 2026-11-03 | activo (2026-11-03) | registrado el 2026-05-18 (NameSilo); correo en Google Workspace con DKIM propio y sin DMARC; envía la continuación con el enlace |
+| `yizhaojingyun[.]com` | dominio base de la puerta y del proxy AiTM | alta | 2026-11-03 | activo (2026-11-03) | registrado el 2026-08-24 (NiceNIC); DNS en Cloudflare pero con el registro A apuntando al origen; certificado desde el 2026-09-07; atiende a varias campañas |
+
+### Hosts (5)
+
+| Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
+|---|---|---|---|---|---|
+| `a4vhglh3m[.]yizhaojingyun[.]com` | puerta anti-análisis (sistema de distribución de tráfico) | alta | 2026-11-03 | activo (2026-11-03) | /.verify, /.detect y /.devtools; los bots terminan en stackoverflow.com o google.com |
+| `loginlive[.]yizhaojingyun[.]com` | reflejo de login.live.com | alta | 2026-11-03 | activo (2026-11-03) | sirve /Me.htm |
+| `loginms[.]yizhaojingyun[.]com` | reflejo de login.microsoft.com | alta | 2026-11-03 | activo (2026-11-03) | sirve /.well-known/webauthn con los orígenes del proxy |
+| `tfgevds[.]yizhaojingyun[.]com` | proxy AiTM del inicio de sesión de Microsoft | alta | 2026-11-03 | activo (2026-11-03) | reenvía usuario, contraseña y cookies de sesión a Entra ID en tiempo real |
+| `www[.]yizhaojingyun[.]com` | salto con token de un solo uso hacia el proxy | alta | 2026-11-03 | activo (2026-11-03) | rutas /p/<token> |
+
+### URLs (1)
+
+| Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
+|---|---|---|---|---|---|
+| `hxxps://a4vhglh3m[.]yizhaojingyun[.]com/v1df2lmz-gpl5fqfab2-vpd6dfbxiwgsg-8iyxionbd8wsj` | entrada de la puerta usada en la campaña | alta | 2026-11-03 | activo (2026-11-03) | genérica, sin el correo de la víctima; el kit acepta el correo en #correo, ?email= o ?e= |
+
+### Direcciones IP (1)
+
+| Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
+|---|---|---|---|---|---|
+| `94[.]26[.]106[.]29` | origen de yizhaojingyun.com (fuera de Cloudflare) | alta | 2026-11-03 | activo (2026-11-03) | hosting Techties (Bulgaria) con IP alemana; desde aquí el proxy inicia sesión en Microsoft: buscarla en los inicios de sesión de Entra ID |
+
+### Cadenas para cazar (6)
+
+| Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
+|---|---|---|---|---|---|
+| `/.detect` | ruta POST del detector de entornos de análisis | alta | 2026-11-03 | — | cuerpo JSON con type "sandbox", score, rs, url y ent_count |
+| `/.devtools` | ruta POST que avisa si se abren las herramientas de desarrollo | alta | 2026-11-03 | — | oculta la página y redirige a google.com |
+| `/.verify` | ruta POST de la puerta: prueba de trabajo y huella del navegador | alta | 2026-11-03 | — | cuerpo JSON con challenge_id, solution, sig_score, sig_flags, fp, tz, tz_off, hc y dm |
+| `24600978-7df2-44bc-9a8c-a18c95ca6886` | sitekey de hCaptcha configurada en el kit | media | 2026-11-03 | — | hCaptcha venía apagado (USE_HCAPTCHA = false); sirve para relacionar otras campañas del mismo kit |
+| `_vfy` | cookie de la puerta | media | 2026-11-03 | — | válida 7 días en el dominio base |
+| `prompt=none&id_token_hint=dummy` | abuso de redirección OAuth abierta en el enlace del correo | media | 2026-11-03 | — | un endpoint /oauth/authorize legítimo devuelve error y redirige igual al redirect_uri del actor |
