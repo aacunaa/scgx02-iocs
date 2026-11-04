@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23949280.svg)](https://doi.org/10.5281/zenodo.23949280)
 
-**Cómo citar / Cite as:** Acuña Arancibia, A. (2026). *IOCs, STIX and YARA for AiTM phishing campaigns: SCGX02 / CodeStorm, Green Proxy (RFQ AiTM) and Mirai 'wraith'* (v2026.11.04) [Data set]. Raiku Solutions. https://doi.org/10.5281/zenodo.23949280
+**Cómo citar / Cite as:** aacunaa (2026). *IOCs, STIX and YARA for AiTM phishing campaigns: SCGX02 / CodeStorm, Green Proxy (RFQ AiTM) and Mirai 'wraith'* (v2026.11.04) [Data set]. Raiku Solutions. https://doi.org/10.5281/zenodo.23949280
 
 Indicadores de compromiso de campañas de **phishing de adversario en el medio (AiTM)** contra cuentas de Microsoft 365. Los publica **Raiku Solutions** a partir de investigaciones de respuesta a incidentes en Chile (octubre y noviembre de 2026). **TLP:CLEAR:** se pueden compartir sin restricción.
 

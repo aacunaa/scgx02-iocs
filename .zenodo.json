@@ -3,7 +3,7 @@
   "description": "Indicators of compromise, STIX 2.1 bundles, feeds and YARA rules published by Raiku Solutions (Chile) from incident response work: the SCGX02 / CodeStorm AiTM kit, the undocumented 'Green Proxy' Microsoft 365 AiTM phishing-as-a-service (two-step RFQ delivery) and a related Mirai C2. Write-up: https://raiku.cl/research/green-proxy . TLP:CLEAR.",
   "upload_type": "dataset",
   "creators": [
-    {"name": "Acuña Arancibia, Adolfo", "affiliation": "Raiku Solutions"}
+    {"name": "aacunaa", "affiliation": "Raiku Solutions"}
   ],
   "license": "cc-by-4.0",
   "keywords": ["threat intelligence", "IOC", "phishing", "AiTM", "phishing-as-a-service", "Microsoft 365", "Green Proxy", "Mirai", "STIX", "YARA"],
