@@ -78,7 +78,7 @@ scgx02,cadena,1497982805,APPID de Tencent Cloud de los buckets,alta,2026-10-16,,
 scgx02,cadena,1483637648,APPID de Tencent Cloud de los buckets,alta,2026-10-18,,,
 scgx02,cadena,1457164341,APPID de Tencent Cloud de los buckets (versión 1),alta,2026-10-18,,,
 rfq-aitm,dominio,yizhaojingyun.com,dominio base de la puerta y del proxy AiTM,alta,2026-11-03,activo,2026-11-03,registrado el 2026-08-24 (NiceNIC); DNS en Cloudflare pero con el registro A apuntando al origen; certificado desde el 2026-09-07; atiende a varias campañas
-rfq-aitm,dominio,greenproxysimpleserver.cc,captcha propio del kit,alta,2026-11-03,activo,2026-11-03,servicio en el puerto 8443 detrás de Cloudflare: /captcha/api y /captcha/verify (prueba de trabajo SHA-256)
+rfq-aitm,dominio,greenproxysimpleserver.cc,panel de clientes y captcha de la plataforma «Green Proxy»,alta,2026-11-03,activo,2026-11-04,"registrado el 2025-09-17 (NameSilo); /login pide usuario, contraseña y licencia GPKEY; API de captcha en el puerto 8443 (/captcha/api y /captcha/verify, prueba de trabajo SHA-256); panel visto en urlscan desde el 2026-04-16"
 rfq-aitm,dominio,ipfs-us.com,dominio que suplanta a una empresa estadounidense de financiamiento de primas,alta,2026-11-03,activo,2026-11-03,registrado el 2026-05-18 (NameSilo); correo en Google Workspace con DKIM propio y sin DMARC; envía la continuación con el enlace
 rfq-aitm,host,a4vhglh3m.yizhaojingyun.com,puerta anti-análisis (sistema de distribución de tráfico),alta,2026-11-03,activo,2026-11-03,"/.verify, /.detect y /.devtools; los bots terminan en stackoverflow.com o google.com"
 rfq-aitm,host,www.yizhaojingyun.com,salto con token de un solo uso hacia el proxy,alta,2026-11-03,activo,2026-11-03,rutas /p/<token>
@@ -93,3 +93,15 @@ rfq-aitm,cadena,/.devtools,ruta POST que avisa si se abren las herramientas de d
 rfq-aitm,cadena,_vfy,cookie de la puerta,media,2026-11-03,,,válida 7 días en el dominio base
 rfq-aitm,cadena,24600978-7df2-44bc-9a8c-a18c95ca6886,sitekey de hCaptcha configurada en el kit,media,2026-11-03,,,hCaptcha venía apagado (USE_HCAPTCHA = false); sirve para relacionar otras campañas del mismo kit
 rfq-aitm,cadena,prompt=none&id_token_hint=dummy,abuso de redirección OAuth abierta en el enlace del correo,media,2026-11-03,,,un endpoint /oauth/authorize legítimo devuelve error y redirige igual al redirect_uri del actor
+rfq-aitm,host,sso.yizhaojingyun.com,reflejo del inicio de sesión único de Microsoft,alta,2026-08-24,activo,2026-11-04,certificado propio del 2026-08-24
+rfq-aitm,host,aadcdn.yizhaojingyun.com,reflejo de aadcdn.msftauth.net (recursos del inicio de sesión),alta,2026-08-24,activo,2026-11-04,certificado propio del 2026-08-24
+rfq-aitm,host,aadcdnms.yizhaojingyun.com,reflejo de los recursos del inicio de sesión de Microsoft,alta,2026-08-24,activo,2026-11-04,certificado propio del 2026-08-24
+rfq-aitm,host,hzxuidfnie.yizhaojingyun.com,primer despliegue de la puerta,alta,2026-08-24,activo,2026-11-04,visto en urlscan dos horas después del registro; entonces mandaba a los bots a una página de Microsoft. El dominio tiene más de 100 subdominios aleatorios de 10 caracteres: bloquear el dominio completo
+rfq-aitm,dominio,eargentyna.com,panel anterior de la plataforma «Green Proxy»,alta,2026-08-27,activo,2026-11-04,"título «GreenProxy — Login» en /login.html y api./login.html; mismo logo que el panel actual (por hash); dominio reciclado, registrado de nuevo el 2026-03-17 (NiceNIC); 23 subdominios de sep-nov 2025 (varios con códigos de país)"
+rfq-aitm,host,api.eargentyna.com,panel anterior de «Green Proxy»,alta,2026-08-27,activo,2026-11-04,/login.html
+rfq-aitm,ipv4,45.153.34.192,origen de eargentyna.com en agosto de 2026,media,2026-08-27,sin_datos,2026-11-04,"TechTies (AS197170), el mismo proveedor que el proxy; hoy el dominio apunta a otra IP"
+rfq-aitm,ipv4,91.92.47.181,origen actual de eargentyna.com (fuera de Cloudflare),alta,2026-11-04,activo,2026-11-04,TechTies (AS197170)
+rfq-aitm,sha256,50448224e0cb3dbcee198157ad6e01f3c59b36b7fb7e43601aa9f94ed842fb6a,HTML del panel «Green Proxy — Login»,alta,2026-04-16,,,idéntico en los escaneos de urlscan de abril a noviembre de 2026; buscar en urlscan con hash:
+rfq-aitm,sha256,d1fc8bf9fbb5a0efaef075466ddb2531e07a7a6405e31d2155538c03af77f688,logo de «Green Proxy» (imagen en i.ibb.co),alta,2026-04-16,,,aparece en los dos paneles; buscar en urlscan con hash: para encontrar paneles nuevos
+rfq-aitm,cadena,Green Proxy — Login,título del panel actual,alta,2026-04-16,,,la versión anterior usa «GreenProxy — Login»
+rfq-aitm,cadena,GPKEY-,prefijo de las licencias de la plataforma,alta,2026-04-16,,,el panel pide una clave con formato GPKEY-XXXX-XXXX-XXXX

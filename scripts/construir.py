@@ -47,7 +47,8 @@ CAMPANAS = {
         "descripcion": "Falsas solicitudes de cotización en dos pasos: un primer correo sin enlaces desde buzones reales comprometidos y, cuando la víctima "
                        "responde, la continuación desde un dominio que suplanta a una empresa real, con un enlace que pasa por una redirección OAuth abierta. "
                        "Termina en un proxy AiTM del inicio de sesión de Microsoft, detrás de una puerta con prueba de trabajo, huella del navegador, "
-                       "detector de entornos de análisis y captcha propio."},
+                       "detector de entornos de análisis y captcha propio. La puerta, el captcha y el panel de clientes son de la plataforma de "
+                       "phishing como servicio «Green Proxy», que se vende con licencias (GPKEY) y funciona al menos desde septiembre de 2025."},
 }
 
 

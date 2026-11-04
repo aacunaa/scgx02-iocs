@@ -1,13 +1,17 @@
-# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM — dominios y hosts del actor (bloquear también los subdominios de los dominios base). TLP:CLEAR. Versión 2026-11-03. Fuente: datos/iocs.csv. Un valor por línea.
+# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM — dominios y hosts del actor (bloquear también los subdominios de los dominios base). TLP:CLEAR. Versión 2026-11-04. Fuente: datos/iocs.csv. Un valor por línea.
 a4vhglh3m.yizhaojingyun.com
+aadcdn.yizhaojingyun.com
+aadcdnms.yizhaojingyun.com
 alladokument.ancientrooftops.de
 ancientrooftops.de
+api.eargentyna.com
 beta.gentlesunrise.de
 cdstyr546tt54re5ty6y5-1457164341.cos.na-siliconvalley.myqcloud.com
 cedar69.whispersofgoldenlight.de
 chairoftime.de
 comrandjet.com
 eagerlyshowingoff.de
+eargentyna.com
 enrollments.sleepingforestmagic.de
 essentialdocstorage.de
 fileviewall.ancientrooftops.de
@@ -21,6 +25,7 @@ hcenginreering.net
 hfkme.blob.core.windows.net
 hjzok.harmonyofnature.de
 htgftyhy6565tt54rr43-1457164341.cos.na-siliconvalley.myqcloud.com
+hzxuidfnie.yizhaojingyun.com
 ipfs-us.com
 jasper67.sleepingforestmystery.de
 keluar.forestgolem.de
@@ -53,6 +58,7 @@ silverstreetmoon.de
 sleepingforestmagic.de
 sleepingforestmystery.de
 softlycloaked.de
+sso.yizhaojingyun.com
 tfgevds.yizhaojingyun.com
 tundra30.chairoftime.de
 vault53-d309-1497982805.cos.na-siliconvalley.myqcloud.com

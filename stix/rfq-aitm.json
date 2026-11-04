@@ -1,6 +1,6 @@
 {
  "type": "bundle",
- "id": "bundle--830c4acf-6c2b-5d03-8470-63bb126ab067",
+ "id": "bundle--61ef52d8-3346-55be-995e-525bb8c8ac82",
  "objects": [
   {
    "type": "marking-definition",
@@ -17,8 +17,8 @@
    "type": "identity",
    "spec_version": "2.1",
    "id": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "name": "Raiku Solutions",
    "identity_class": "organization",
    "sectors": [
@@ -32,22 +32,22 @@
    "type": "campaign",
    "id": "campaign--5f443652-76d0-5e46-a07a-f7ba8eb40bbd",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
    ],
    "name": "RFQ en dos pasos / proxy AiTM",
-   "description": "Falsas solicitudes de cotización en dos pasos: un primer correo sin enlaces desde buzones reales comprometidos y, cuando la víctima responde, la continuación desde un dominio que suplanta a una empresa real, con un enlace que pasa por una redirección OAuth abierta. Termina en un proxy AiTM del inicio de sesión de Microsoft, detrás de una puerta con prueba de trabajo, huella del navegador, detector de entornos de análisis y captcha propio.",
-   "first_seen": "2026-11-03T00:00:00.000Z"
+   "description": "Falsas solicitudes de cotización en dos pasos: un primer correo sin enlaces desde buzones reales comprometidos y, cuando la víctima responde, la continuación desde un dominio que suplanta a una empresa real, con un enlace que pasa por una redirección OAuth abierta. Termina en un proxy AiTM del inicio de sesión de Microsoft, detrás de una puerta con prueba de trabajo, huella del navegador, detector de entornos de análisis y captcha propio. La puerta, el captcha y el panel de clientes son de la plataforma de phishing como servicio «Green Proxy», que se vende con licencias (GPKEY) y funciona al menos desde septiembre de 2025.",
+   "first_seen": "2026-04-16T00:00:00.000Z"
   },
   {
    "type": "indicator",
    "id": "indicator--d9ecada4-2fac-5b8b-be3b-e68d9495746c",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -69,8 +69,8 @@
    "type": "relationship",
    "id": "relationship--77b96e0d-0f77-5f49-a5d8-17b9064024f1",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -83,14 +83,14 @@
    "type": "indicator",
    "id": "indicator--43a00a55-8b53-5984-b718-ebdd82ca9243",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
    ],
-   "name": "captcha propio del kit: greenproxysimpleserver[.]cc",
-   "description": "servicio en el puerto 8443 detrás de Cloudflare: /captcha/api y /captcha/verify (prueba de trabajo SHA-256)",
+   "name": "panel de clientes y captcha de la plataforma «Green Proxy»: greenproxysimpleserver[.]cc",
+   "description": "registrado el 2025-09-17 (NameSilo); /login pide usuario, contraseña y licencia GPKEY; API de captcha en el puerto 8443 (/captcha/api y /captcha/verify, prueba de trabajo SHA-256); panel visto en urlscan desde el 2026-04-16",
    "indicator_types": [
     "malicious-activity"
    ],
@@ -106,8 +106,8 @@
    "type": "relationship",
    "id": "relationship--f219bbad-f31d-5dbb-8d72-8651194b0949",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -120,8 +120,8 @@
    "type": "indicator",
    "id": "indicator--4c659bc2-b2c8-51c6-85bc-79363c442cbf",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -143,8 +143,8 @@
    "type": "relationship",
    "id": "relationship--19686f32-6aee-556b-869a-2a8bdc1088ac",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -157,8 +157,8 @@
    "type": "indicator",
    "id": "indicator--c3ab8fd1-c6f9-5989-aaf6-8fa206a88c05",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -180,8 +180,8 @@
    "type": "relationship",
    "id": "relationship--4d94a2f6-2271-57f7-bd9d-3f2de715b866",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -194,8 +194,8 @@
    "type": "indicator",
    "id": "indicator--cd1d9070-792d-52a1-9b0b-9f56b376cd48",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -217,8 +217,8 @@
    "type": "relationship",
    "id": "relationship--a6640e9c-5185-5263-b71b-90e3a1d532da",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -231,8 +231,8 @@
    "type": "indicator",
    "id": "indicator--ba9a4889-e1e7-52a7-944f-ea4558ab1c2b",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -254,8 +254,8 @@
    "type": "relationship",
    "id": "relationship--5b71f304-d987-5a7d-9bde-ff8e4f0625b7",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -268,8 +268,8 @@
    "type": "indicator",
    "id": "indicator--30ad5cfc-6e14-57fa-a492-8d4a7e388e28",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -291,8 +291,8 @@
    "type": "relationship",
    "id": "relationship--1b02e0c9-e72c-5369-9be4-7dd33b40901b",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -305,8 +305,8 @@
    "type": "indicator",
    "id": "indicator--3aaad0f1-d106-5fc7-8017-e09bffed71d9",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -328,8 +328,8 @@
    "type": "relationship",
    "id": "relationship--fd0d1a59-60fa-53a4-88ea-975332fcf200",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -342,8 +342,8 @@
    "type": "indicator",
    "id": "indicator--53da3544-975c-5a39-8264-9ae7b40939fd",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -365,8 +365,8 @@
    "type": "relationship",
    "id": "relationship--3c34ba42-87a4-501f-8f7d-8f7a9976ce30",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -379,8 +379,8 @@
    "type": "indicator",
    "id": "indicator--5753ea20-8635-5987-80f3-6e2fda64e6c1",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
@@ -402,14 +402,380 @@
    "type": "relationship",
    "id": "relationship--7f918687-18e6-5ad5-b8ab-7b03621d7c8c",
    "spec_version": "2.1",
-   "created": "2026-11-03T00:00:00.000Z",
-   "modified": "2026-11-03T00:00:00.000Z",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
    "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
    "object_marking_refs": [
     "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
    ],
    "relationship_type": "indicates",
    "source_ref": "indicator--5753ea20-8635-5987-80f3-6e2fda64e6c1",
+   "target_ref": "campaign--5f443652-76d0-5e46-a07a-f7ba8eb40bbd"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--e041e0e1-9ca2-5d49-b612-d3b72fe0c618",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "reflejo del inicio de sesión único de Microsoft: sso[.]yizhaojingyun[.]com",
+   "description": "certificado propio del 2026-08-24",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'sso.yizhaojingyun.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-08-24T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--de7f690d-b001-581c-a360-06ef7bf35fd0",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--e041e0e1-9ca2-5d49-b612-d3b72fe0c618",
+   "target_ref": "campaign--5f443652-76d0-5e46-a07a-f7ba8eb40bbd"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--d24cdfff-d984-5a31-a2cc-e2f59890a6f6",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "reflejo de aadcdn.msftauth.net (recursos del inicio de sesión): aadcdn[.]yizhaojingyun[.]com",
+   "description": "certificado propio del 2026-08-24",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'aadcdn.yizhaojingyun.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-08-24T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--2f7d838e-aba1-563e-b2e7-b8dbea1db3b2",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--d24cdfff-d984-5a31-a2cc-e2f59890a6f6",
+   "target_ref": "campaign--5f443652-76d0-5e46-a07a-f7ba8eb40bbd"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--736a63f3-849b-54ba-bf11-1809e0261f97",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "reflejo de los recursos del inicio de sesión de Microsoft: aadcdnms[.]yizhaojingyun[.]com",
+   "description": "certificado propio del 2026-08-24",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'aadcdnms.yizhaojingyun.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-08-24T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--150bd457-c3e5-505b-902e-e00faec95c9c",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--736a63f3-849b-54ba-bf11-1809e0261f97",
+   "target_ref": "campaign--5f443652-76d0-5e46-a07a-f7ba8eb40bbd"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--bbecac0f-1669-5606-b03b-26e2fab2bfbb",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "primer despliegue de la puerta: hzxuidfnie[.]yizhaojingyun[.]com",
+   "description": "visto en urlscan dos horas después del registro; entonces mandaba a los bots a una página de Microsoft. El dominio tiene más de 100 subdominios aleatorios de 10 caracteres: bloquear el dominio completo",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'hzxuidfnie.yizhaojingyun.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-08-24T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--86f03f54-5cc4-50f0-b5aa-f03465e672ec",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--bbecac0f-1669-5606-b03b-26e2fab2bfbb",
+   "target_ref": "campaign--5f443652-76d0-5e46-a07a-f7ba8eb40bbd"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--c942e7eb-7711-5875-b3aa-418223d3ec39",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel anterior de la plataforma «Green Proxy»: eargentyna[.]com",
+   "description": "título «GreenProxy — Login» en /login.html y api./login.html; mismo logo que el panel actual (por hash); dominio reciclado, registrado de nuevo el 2026-03-17 (NiceNIC); 23 subdominios de sep-nov 2025 (varios con códigos de país)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'eargentyna.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-08-27T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--52f143a5-9794-5722-895b-36efbc7e7f29",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--c942e7eb-7711-5875-b3aa-418223d3ec39",
+   "target_ref": "campaign--5f443652-76d0-5e46-a07a-f7ba8eb40bbd"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--e02c72ca-0405-51c1-af63-512aa6a0dd18",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "panel anterior de «Green Proxy»: api[.]eargentyna[.]com",
+   "description": "/login.html",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'api.eargentyna.com']",
+   "pattern_type": "stix",
+   "valid_from": "2026-08-27T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--6ca87be3-c789-55b5-93ba-b0f35d63f1a0",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--e02c72ca-0405-51c1-af63-512aa6a0dd18",
+   "target_ref": "campaign--5f443652-76d0-5e46-a07a-f7ba8eb40bbd"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--ec46ac48-1aa2-5829-9a87-d38035a54b0b",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "origen de eargentyna.com en agosto de 2026: 45[.]153[.]34[.]192",
+   "description": "TechTies (AS197170), el mismo proveedor que el proxy; hoy el dominio apunta a otra IP",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[ipv4-addr:value = '45.153.34.192']",
+   "pattern_type": "stix",
+   "valid_from": "2026-08-27T00:00:00.000Z",
+   "confidence": 60,
+   "labels": [
+    "estado:sin_datos"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--10573171-5131-549d-a0a3-70e1d7b28dbb",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--ec46ac48-1aa2-5829-9a87-d38035a54b0b",
+   "target_ref": "campaign--5f443652-76d0-5e46-a07a-f7ba8eb40bbd"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--314d91ca-8e77-57e7-a0df-9ccdeec128eb",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "origen actual de eargentyna.com (fuera de Cloudflare): 91[.]92[.]47[.]181",
+   "description": "TechTies (AS197170)",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[ipv4-addr:value = '91.92.47.181']",
+   "pattern_type": "stix",
+   "valid_from": "2026-11-04T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--c21f5c7a-1fa4-566e-b5e1-6163b49432c9",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--314d91ca-8e77-57e7-a0df-9ccdeec128eb",
+   "target_ref": "campaign--5f443652-76d0-5e46-a07a-f7ba8eb40bbd"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--dfa0d36b-72f4-5ad3-b164-7ef64f95a1e6",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "HTML del panel «Green Proxy — Login»: 50448224e0cb3dbcee198157ad6e01f3c59b36b7fb7e43601aa9f94ed842fb6a",
+   "description": "idéntico en los escaneos de urlscan de abril a noviembre de 2026; buscar en urlscan con hash:",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[file:hashes.'SHA-256' = '50448224e0cb3dbcee198157ad6e01f3c59b36b7fb7e43601aa9f94ed842fb6a']",
+   "pattern_type": "stix",
+   "valid_from": "2026-04-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": []
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--2df4a9d9-dc43-5555-8b8d-bd4c41728e71",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--dfa0d36b-72f4-5ad3-b164-7ef64f95a1e6",
+   "target_ref": "campaign--5f443652-76d0-5e46-a07a-f7ba8eb40bbd"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--2326a5f2-0de2-555d-a17a-ecdb1d8d6e04",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "logo de «Green Proxy» (imagen en i.ibb.co): d1fc8bf9fbb5a0efaef075466ddb2531e07a7a6405e31d2155538c03af77f688",
+   "description": "aparece en los dos paneles; buscar en urlscan con hash: para encontrar paneles nuevos",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[file:hashes.'SHA-256' = 'd1fc8bf9fbb5a0efaef075466ddb2531e07a7a6405e31d2155538c03af77f688']",
+   "pattern_type": "stix",
+   "valid_from": "2026-04-16T00:00:00.000Z",
+   "confidence": 85,
+   "labels": []
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--2c9faaae-de1b-5d5a-8849-8eb208ceec7c",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--2326a5f2-0de2-555d-a17a-ecdb1d8d6e04",
    "target_ref": "campaign--5f443652-76d0-5e46-a07a-f7ba8eb40bbd"
   }
  ]

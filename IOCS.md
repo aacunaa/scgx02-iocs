@@ -1,4 +1,4 @@
-# IOC publicados por Raiku Solutions (versión 2026-11-03)
+# IOC publicados por Raiku Solutions (versión 2026-11-04)
 
 Tabla generada desde `datos/iocs.csv` con `scripts/construir.py`. Los valores están desarmados (`[.]`, `hxxps`) para que no se puedan abrir por error.
 Los valores tal cual, para cargar en un bloqueo, están en `feeds/` (todas las campañas juntas), y un paquete STIX 2.1 por campaña en `stix/`.
@@ -118,23 +118,29 @@ Los valores tal cual, para cargar en un bloqueo, están en `feeds/` (todas las c
 | `e20e2de7dca648d8846620b76a7849c5` | token de Cloudflare Web Analytics compartido por landings y panel | alta | 2026-10-16 | — |  |
 | `wfrsx_0x3197` | identificador del ofuscador del kit (versión 2) | alta | 2026-10-18 | — |  |
 
-## RFQ en dos pasos / proxy AiTM (versión 2026-11-03, `stix/rfq-aitm.json`)
+## RFQ en dos pasos / proxy AiTM (versión 2026-11-04, `stix/rfq-aitm.json`)
 
-### Dominios base (3)
+### Dominios base (4)
 
 | Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
 |---|---|---|---|---|---|
-| `greenproxysimpleserver[.]cc` | captcha propio del kit | alta | 2026-11-03 | activo (2026-11-03) | servicio en el puerto 8443 detrás de Cloudflare: /captcha/api y /captcha/verify (prueba de trabajo SHA-256) |
+| `eargentyna[.]com` | panel anterior de la plataforma «Green Proxy» | alta | 2026-08-27 | activo (2026-11-04) | título «GreenProxy — Login» en /login.html y api./login.html; mismo logo que el panel actual (por hash); dominio reciclado, registrado de nuevo el 2026-03-17 (NiceNIC); 23 subdominios de sep-nov 2025 (varios con códigos de país) |
+| `greenproxysimpleserver[.]cc` | panel de clientes y captcha de la plataforma «Green Proxy» | alta | 2026-11-03 | activo (2026-11-04) | registrado el 2025-09-17 (NameSilo); /login pide usuario, contraseña y licencia GPKEY; API de captcha en el puerto 8443 (/captcha/api y /captcha/verify, prueba de trabajo SHA-256); panel visto en urlscan desde el 2026-04-16 |
 | `ipfs-us[.]com` | dominio que suplanta a una empresa estadounidense de financiamiento de primas | alta | 2026-11-03 | activo (2026-11-03) | registrado el 2026-05-18 (NameSilo); correo en Google Workspace con DKIM propio y sin DMARC; envía la continuación con el enlace |
 | `yizhaojingyun[.]com` | dominio base de la puerta y del proxy AiTM | alta | 2026-11-03 | activo (2026-11-03) | registrado el 2026-08-24 (NiceNIC); DNS en Cloudflare pero con el registro A apuntando al origen; certificado desde el 2026-09-07; atiende a varias campañas |
 
-### Hosts (5)
+### Hosts (10)
 
 | Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
 |---|---|---|---|---|---|
 | `a4vhglh3m[.]yizhaojingyun[.]com` | puerta anti-análisis (sistema de distribución de tráfico) | alta | 2026-11-03 | activo (2026-11-03) | /.verify, /.detect y /.devtools; los bots terminan en stackoverflow.com o google.com |
+| `aadcdn[.]yizhaojingyun[.]com` | reflejo de aadcdn.msftauth.net (recursos del inicio de sesión) | alta | 2026-08-24 | activo (2026-11-04) | certificado propio del 2026-08-24 |
+| `aadcdnms[.]yizhaojingyun[.]com` | reflejo de los recursos del inicio de sesión de Microsoft | alta | 2026-08-24 | activo (2026-11-04) | certificado propio del 2026-08-24 |
+| `api[.]eargentyna[.]com` | panel anterior de «Green Proxy» | alta | 2026-08-27 | activo (2026-11-04) | /login.html |
+| `hzxuidfnie[.]yizhaojingyun[.]com` | primer despliegue de la puerta | alta | 2026-08-24 | activo (2026-11-04) | visto en urlscan dos horas después del registro; entonces mandaba a los bots a una página de Microsoft. El dominio tiene más de 100 subdominios aleatorios de 10 caracteres: bloquear el dominio completo |
 | `loginlive[.]yizhaojingyun[.]com` | reflejo de login.live.com | alta | 2026-11-03 | activo (2026-11-03) | sirve /Me.htm |
 | `loginms[.]yizhaojingyun[.]com` | reflejo de login.microsoft.com | alta | 2026-11-03 | activo (2026-11-03) | sirve /.well-known/webauthn con los orígenes del proxy |
+| `sso[.]yizhaojingyun[.]com` | reflejo del inicio de sesión único de Microsoft | alta | 2026-08-24 | activo (2026-11-04) | certificado propio del 2026-08-24 |
 | `tfgevds[.]yizhaojingyun[.]com` | proxy AiTM del inicio de sesión de Microsoft | alta | 2026-11-03 | activo (2026-11-03) | reenvía usuario, contraseña y cookies de sesión a Entra ID en tiempo real |
 | `www[.]yizhaojingyun[.]com` | salto con token de un solo uso hacia el proxy | alta | 2026-11-03 | activo (2026-11-03) | rutas /p/<token> |
 
@@ -144,13 +150,22 @@ Los valores tal cual, para cargar en un bloqueo, están en `feeds/` (todas las c
 |---|---|---|---|---|---|
 | `hxxps://a4vhglh3m[.]yizhaojingyun[.]com/v1df2lmz-gpl5fqfab2-vpd6dfbxiwgsg-8iyxionbd8wsj` | entrada de la puerta usada en la campaña | alta | 2026-11-03 | activo (2026-11-03) | genérica, sin el correo de la víctima; el kit acepta el correo en #correo, ?email= o ?e= |
 
-### Direcciones IP (1)
+### Archivos (SHA-256) (2)
 
 | Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
 |---|---|---|---|---|---|
-| `94[.]26[.]106[.]29` | origen de yizhaojingyun.com (fuera de Cloudflare) | alta | 2026-11-03 | activo (2026-11-03) | hosting Techties (Bulgaria) con IP alemana; desde aquí el proxy inicia sesión en Microsoft: buscarla en los inicios de sesión de Entra ID |
+| `50448224e0cb3dbcee198157ad6e01f3c59b36b7fb7e43601aa9f94ed842fb6a` | HTML del panel «Green Proxy — Login» | alta | 2026-04-16 | — | idéntico en los escaneos de urlscan de abril a noviembre de 2026; buscar en urlscan con hash: |
+| `d1fc8bf9fbb5a0efaef075466ddb2531e07a7a6405e31d2155538c03af77f688` | logo de «Green Proxy» (imagen en i.ibb.co) | alta | 2026-04-16 | — | aparece en los dos paneles; buscar en urlscan con hash: para encontrar paneles nuevos |
 
-### Cadenas para cazar (6)
+### Direcciones IP (3)
+
+| Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
+|---|---|---|---|---|---|
+| `91[.]92[.]47[.]181` | origen actual de eargentyna.com (fuera de Cloudflare) | alta | 2026-11-04 | activo (2026-11-04) | TechTies (AS197170) |
+| `94[.]26[.]106[.]29` | origen de yizhaojingyun.com (fuera de Cloudflare) | alta | 2026-11-03 | activo (2026-11-03) | hosting Techties (Bulgaria) con IP alemana; desde aquí el proxy inicia sesión en Microsoft: buscarla en los inicios de sesión de Entra ID |
+| `45[.]153[.]34[.]192` | origen de eargentyna.com en agosto de 2026 | media | 2026-08-27 | sin datos (2026-11-04) | TechTies (AS197170), el mismo proveedor que el proxy; hoy el dominio apunta a otra IP |
+
+### Cadenas para cazar (8)
 
 | Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
 |---|---|---|---|---|---|
@@ -158,5 +173,7 @@ Los valores tal cual, para cargar en un bloqueo, están en `feeds/` (todas las c
 | `/.devtools` | ruta POST que avisa si se abren las herramientas de desarrollo | alta | 2026-11-03 | — | oculta la página y redirige a google.com |
 | `/.verify` | ruta POST de la puerta: prueba de trabajo y huella del navegador | alta | 2026-11-03 | — | cuerpo JSON con challenge_id, solution, sig_score, sig_flags, fp, tz, tz_off, hc y dm |
 | `24600978-7df2-44bc-9a8c-a18c95ca6886` | sitekey de hCaptcha configurada en el kit | media | 2026-11-03 | — | hCaptcha venía apagado (USE_HCAPTCHA = false); sirve para relacionar otras campañas del mismo kit |
+| `GPKEY-` | prefijo de las licencias de la plataforma | alta | 2026-04-16 | — | el panel pide una clave con formato GPKEY-XXXX-XXXX-XXXX |
+| `Green Proxy — Login` | título del panel actual | alta | 2026-04-16 | — | la versión anterior usa «GreenProxy — Login» |
 | `_vfy` | cookie de la puerta | media | 2026-11-03 | — | válida 7 días en el dominio base |
 | `prompt=none&id_token_hint=dummy` | abuso de redirección OAuth abierta en el enlace del correo | media | 2026-11-03 | — | un endpoint /oauth/authorize legítimo devuelve error y redirige igual al redirect_uri del actor |

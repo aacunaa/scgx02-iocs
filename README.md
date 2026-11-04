@@ -27,6 +27,21 @@ El repositorio nació con SCGX02, de ahí su nombre.
 4. **Puerta:** `yizhaojingyun[.]com` decide quién ve el phishing: prueba de trabajo y huella del navegador (`/.verify`), detector de entornos de análisis (`/.detect`), captcha propio (`greenproxysimpleserver[.]cc`) y una trampa para las herramientas de desarrollo (`/.devtools`). A los bots los manda a Stack Overflow o a Google.
 5. **Robo:** un proxy AiTM (`tfgevds.`, `loginlive.` y `loginms.yizhaojingyun[.]com`) reenvía en tiempo real el inicio de sesión de Microsoft y se queda con la sesión aunque haya segundo factor. La misma puerta atiende a otras campañas: es phishing como servicio.
 
+### La plataforma detrás: «Green Proxy»
+
+La raíz del dominio del captcha, `greenproxysimpleserver[.]cc`, es el **panel de clientes de una plataforma de phishing como servicio llamada «Green Proxy»**. Pide usuario, contraseña y una **licencia `GPKEY-XXXX-XXXX-XXXX`** y permite crear cuentas: el kit se arrienda. Quien envía los correos es probablemente un cliente, no el autor.
+
+| Fecha | Hito |
+|---|---|
+| jul-2025 | El logo de la plataforma es una captura con esa fecha en el nombre del archivo |
+| sep–nov 2025 | Primera infraestructura: `eargentyna[.]com` (panel «GreenProxy — Login») con subdominios que parecen códigos de país; se registra `greenproxysimpleserver[.]cc` |
+| abr–nov 2026 | El panel «Green Proxy — Login» aparece en urlscan con el mismo HTML (SHA-256 `50448224…`) |
+| ago-2026 | Despliegue en `yizhaojingyun[.]com`, un dominio reciclado, con más de 100 subdominios aleatorios |
+
+**Para encontrar paneles nuevos:** en urlscan.io, busque `hash:50448224e0cb3dbcee198157ad6e01f3c59b36b7fb7e43601aa9f94ed842fb6a` (HTML del panel) o `hash:d1fc8bf9fbb5a0efaef075466ddb2531e07a7a6405e31d2155538c03af77f688` (logo).
+
+**Relación con una botnet (no se publica como IOC):** en mayo de 2026, el mismo servidor que hoy hace de proxy (`94.26.106.29`, TechTies, AS197170) presentaba un certificado a nombre de `cnc.murrezbots[.]vip` y servía rutas `/bins/<arquitectura>`, el patrón de las botnets IoT tipo Mirai. Ese dominio todavía apunta a la misma IP, y los otros servidores de la plataforma están en el mismo proveedor. Sugiere que el mismo operador maneja ambas cosas, pero no se pudo obtener una muestra de la botnet, así que queda como relación documentada y no como indicador de esta campaña.
+
 ## Qué hay aquí
 
 | Ruta | Qué es | Para qué |
@@ -51,7 +66,7 @@ El repositorio nació con SCGX02, de ahí su nombre.
 - **Ningún dato de víctimas:** ni los subdominios de las landings (llevan el nombre de la empresa atacada), ni los remitentes, ni los asuntos o identificadores de los correos, ni los sitios legítimos comprometidos que el actor usó de paso. Para bloquear basta el dominio base. Un script rechaza cualquier valor que coincida con una lista local de términos que no se sube.
 - **Direcciones IP de Cloudflare o de terceros:** las IP del borde de Cloudflare no se publican, porque bloquearlas cortaría sitios legítimos. Tampoco las IP residenciales usadas como proxy ni las de servidores de correo compartidos desde donde se enviaron los correos. Solo se publica la IP de **origen** de un servidor del actor cuando queda expuesta fuera de Cloudflare (`94.26.106.29` en la campaña RFQ): desde ahí el proxy inicia sesión en Microsoft, así que sirve para buscar en los registros de inicio de sesión.
 - **Los buzones comprometidos y los sitios de paso** de la campaña RFQ: son empresas reales, víctimas también. Se publica el dominio que el actor registró para suplantar a una empresa, no la empresa suplantada.
-- **Candidatos sin confirmar:** un dominio entra cuando sirve el kit, usa el panel o comparte su huella, no por parecido.
+- **Candidatos sin confirmar:** un dominio entra cuando sirve el kit, usa el panel o comparte su huella, no por parecido. Por eso `greenprox[.]cc` (mismo nombre de marca y mismo registrador, hoy suspendido) no está en los datos.
 
 ## Cómo se obtuvieron y cómo se revalidan
 

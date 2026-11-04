@@ -1,9 +1,13 @@
-# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM — dominios y hosts activos, preparados o bloqueados al 2026-11-03. TLP:CLEAR. Versión 2026-11-03. Fuente: datos/iocs.csv. Un valor por línea.
+# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM — dominios y hosts activos, preparados o bloqueados al 2026-11-04. TLP:CLEAR. Versión 2026-11-04. Fuente: datos/iocs.csv. Un valor por línea.
 a4vhglh3m.yizhaojingyun.com
+aadcdn.yizhaojingyun.com
+aadcdnms.yizhaojingyun.com
 ancientrooftops.de
+api.eargentyna.com
 beta.gentlesunrise.de
 cedar69.whispersofgoldenlight.de
 chairoftime.de
+eargentyna.com
 enrollments.sleepingforestmagic.de
 essentialdocstorage.de
 fileviewall.ancientrooftops.de
@@ -15,6 +19,7 @@ greenproxysimpleserver.cc
 harmonyofnature.de
 hcenginreering.net
 hjzok.harmonyofnature.de
+hzxuidfnie.yizhaojingyun.com
 ipfs-us.com
 jasper67.sleepingforestmystery.de
 keluar.forestgolem.de
@@ -31,6 +36,7 @@ shimmeringglow.de
 silverstreetmoon.de
 sleepingforestmagic.de
 sleepingforestmystery.de
+sso.yizhaojingyun.com
 tfgevds.yizhaojingyun.com
 tundra30.chairoftime.de
 vault53.morningbreezeflowers.de
