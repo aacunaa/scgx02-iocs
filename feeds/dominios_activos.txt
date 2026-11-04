@@ -1,4 +1,4 @@
-# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM — dominios y hosts activos, preparados o bloqueados al 2026-11-04. TLP:CLEAR. Versión 2026-11-04. Fuente: datos/iocs.csv. Un valor por línea.
+# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM + Mirai «wraith» / murrezbots — dominios y hosts activos, preparados o bloqueados al 2026-11-04. TLP:CLEAR. Versión 2026-11-04. Fuente: datos/iocs.csv. Un valor por línea.
 a4vhglh3m.yizhaojingyun.com
 aadcdn.yizhaojingyun.com
 aadcdnms.yizhaojingyun.com
@@ -7,6 +7,7 @@ api.eargentyna.com
 beta.gentlesunrise.de
 cedar69.whispersofgoldenlight.de
 chairoftime.de
+cnc.murrezbots.vip
 eargentyna.com
 enrollments.sleepingforestmagic.de
 essentialdocstorage.de
@@ -27,6 +28,7 @@ loginlive.yizhaojingyun.com
 loginms.yizhaojingyun.com
 lunar64.ancientrooftops.de
 morningbreezeflowers.de
+murrezbots.vip
 pierce16.forestgolem.de
 pierce35.preparednessmatters.de
 pierce99.essentialdocstorage.de

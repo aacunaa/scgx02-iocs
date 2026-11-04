@@ -49,6 +49,11 @@ CAMPANAS = {
                        "Termina en un proxy AiTM del inicio de sesión de Microsoft, detrás de una puerta con prueba de trabajo, huella del navegador, "
                        "detector de entornos de análisis y captcha propio. La puerta, el captcha y el panel de clientes son de la plataforma de "
                        "phishing como servicio «Green Proxy», que se vende con licencias (GPKEY) y funciona al menos desde septiembre de 2025."},
+    "mirai-wraith": {
+        "nombre": "Mirai «wraith» / murrezbots", "stix": "stix/mirai-wraith.json",
+        "descripcion": "Botnet IoT de la familia Mirai (variante etiquetada «wraith» en abuse.ch) con centro de comando en cnc.murrezbots.vip. "
+                       "En mayo de 2026 repartió binarios desde 94.26.106.29, el mismo servidor que desde agosto de 2026 aloja la puerta y el "
+                       "proxy AiTM de la campaña RFQ: probable mismo operador, no probado."},
 }
 
 

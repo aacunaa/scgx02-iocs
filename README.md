@@ -6,6 +6,7 @@ Indicadores de compromiso de campañas de **phishing de adversario en el medio (
 |---|---|---|---|
 | **SCGX02 / CodeStorm** | octubre de 2026 | [`stix/scgx02.json`](stix/scgx02.json) | [`yara/scgx02.yar`](yara/scgx02.yar) |
 | **RFQ en dos pasos / proxy AiTM** | noviembre de 2026 | [`stix/rfq-aitm.json`](stix/rfq-aitm.json) | [`yara/rfq-aitm.yar`](yara/rfq-aitm.yar) |
+| **Mirai «wraith» / murrezbots** (botnet relacionada) | mayo de 2026 | [`stix/mirai-wraith.json`](stix/mirai-wraith.json) | — |
 
 El repositorio nació con SCGX02, de ahí su nombre.
 
@@ -40,7 +41,7 @@ La raíz del dominio del captcha, `greenproxysimpleserver[.]cc`, es el **panel d
 
 **Para encontrar paneles nuevos:** en urlscan.io, busque `hash:50448224e0cb3dbcee198157ad6e01f3c59b36b7fb7e43601aa9f94ed842fb6a` (HTML del panel) o `hash:d1fc8bf9fbb5a0efaef075466ddb2531e07a7a6405e31d2155538c03af77f688` (logo).
 
-**Relación con una botnet (no se publica como IOC):** en mayo de 2026, el mismo servidor que hoy hace de proxy (`94.26.106.29`, TechTies, AS197170) presentaba un certificado a nombre de `cnc.murrezbots[.]vip` y servía rutas `/bins/<arquitectura>`, el patrón de las botnets IoT tipo Mirai. Ese dominio todavía apunta a la misma IP, y los otros servidores de la plataforma están en el mismo proveedor. Sugiere que el mismo operador maneja ambas cosas, pero no se pudo obtener una muestra de la botnet, así que queda como relación documentada y no como indicador de esta campaña.
+**Relación con una botnet (campaña aparte en este repositorio):** el 6 de mayo de 2026, el mismo servidor que hoy hace de proxy (`94.26.106.29`, TechTies, AS197170) repartía binarios de **Mirai** desde `/bins/<arquitectura>`. URLhaus los registró y MalwareBazaar los clasifica como Mirai con la etiqueta «wraith», una variante sin reportes públicos. El servidor presentaba un certificado a nombre de `cnc.murrezbots[.]vip`, que todavía apunta a la misma IP. Los indicadores de la botnet van como campaña aparte, «Mirai «wraith» / murrezbots». Que sea el mismo operador que el phishing es **probable, no probado**: el proveedor pudo reasignar la IP.
 
 ## Qué hay aquí
 

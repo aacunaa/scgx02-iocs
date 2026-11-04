@@ -177,3 +177,31 @@ Los valores tal cual, para cargar en un bloqueo, están en `feeds/` (todas las c
 | `Green Proxy — Login` | título del panel actual | alta | 2026-04-16 | — | la versión anterior usa «GreenProxy — Login» |
 | `_vfy` | cookie de la puerta | media | 2026-11-03 | — | válida 7 días en el dominio base |
 | `prompt=none&id_token_hint=dummy` | abuso de redirección OAuth abierta en el enlace del correo | media | 2026-11-03 | — | un endpoint /oauth/authorize legítimo devuelve error y redirige igual al redirect_uri del actor |
+
+## Mirai «wraith» / murrezbots (versión 2026-11-04, `stix/mirai-wraith.json`)
+
+### Dominios base (1)
+
+| Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
+|---|---|---|---|---|---|
+| `murrezbots[.]vip` | dominio de la botnet | alta | 2026-05-08 | activo (2026-11-04) | registrado el 2026-03-23 (Dynadot); sigue resolviendo a 94.26.106.29, el servidor del proxy de la campaña RFQ |
+
+### Hosts (1)
+
+| Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
+|---|---|---|---|---|---|
+| `cnc[.]murrezbots[.]vip` | centro de comando (C2) de la botnet | alta | 2026-05-08 | activo (2026-11-04) | el servidor presentaba un certificado a su nombre el 2026-05-08; su registro TXT repite la IP del servidor |
+
+### URLs (2)
+
+| Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
+|---|---|---|---|---|---|
+| `hxxp://94[.]26[.]106[.]29/bins/xnxnxnxnxnxnxnxnaarch64xnxn` | descarga del binario Mirai para aarch64 | alta | 2026-05-06 | caido (2026-11-04) | URLhaus, 6-may-2026; fuera de línea a las 3 horas |
+| `hxxp://94[.]26[.]106[.]29/bins/xnxnxnxnxnxnxnxni386xnxn` | descarga del binario Mirai para i386 | alta | 2026-05-06 | caido (2026-11-04) | URLhaus, 6-may-2026; fuera de línea a las 4 horas |
+
+### Archivos (SHA-256) (2)
+
+| Valor | Rol | Confianza | Visto por primera vez | Estado | Notas |
+|---|---|---|---|---|---|
+| `e64d909993647ed17312cea32f60ec65d71dd440ac126d2360aaeeaaf72f7cc1` | binario Mirai «wraith» (ELF aarch64, UPX) | alta | 2026-05-06 | — | MalwareBazaar: Mirai; Intezer: Mirai |
+| `eead126f579323883adaee039a9c46ebc855dbd21d399c35ef746266bfecffd8` | binario Mirai «wraith» (ELF i386, UPX) | alta | 2026-05-06 | — | MalwareBazaar: Mirai; ReversingLabs: Linux.Trojan.Multiverze |

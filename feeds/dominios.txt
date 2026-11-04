@@ -1,4 +1,4 @@
-# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM — dominios y hosts del actor (bloquear también los subdominios de los dominios base). TLP:CLEAR. Versión 2026-11-04. Fuente: datos/iocs.csv. Un valor por línea.
+# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM + Mirai «wraith» / murrezbots — dominios y hosts del actor (bloquear también los subdominios de los dominios base). TLP:CLEAR. Versión 2026-11-04. Fuente: datos/iocs.csv. Un valor por línea.
 a4vhglh3m.yizhaojingyun.com
 aadcdn.yizhaojingyun.com
 aadcdnms.yizhaojingyun.com
@@ -9,6 +9,7 @@ beta.gentlesunrise.de
 cdstyr546tt54re5ty6y5-1457164341.cos.na-siliconvalley.myqcloud.com
 cedar69.whispersofgoldenlight.de
 chairoftime.de
+cnc.murrezbots.vip
 comrandjet.com
 eagerlyshowingoff.de
 eargentyna.com
@@ -37,6 +38,7 @@ lunar64.ancientrooftops.de
 morningbreezeflowers.de
 morningmystery.de
 msoff-standard-cran-v557br-com.id-cgk-1.linodeobjects.com
+murrezbots.vip
 onffline0901.survey-terminaloffviceadmimsurrond.cloud
 pierce16.forestgolem.de
 pierce35.preparednessmatters.de

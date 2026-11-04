@@ -105,3 +105,9 @@ rfq-aitm,sha256,50448224e0cb3dbcee198157ad6e01f3c59b36b7fb7e43601aa9f94ed842fb6a
 rfq-aitm,sha256,d1fc8bf9fbb5a0efaef075466ddb2531e07a7a6405e31d2155538c03af77f688,logo de «Green Proxy» (imagen en i.ibb.co),alta,2026-04-16,,,aparece en los dos paneles; buscar en urlscan con hash: para encontrar paneles nuevos
 rfq-aitm,cadena,Green Proxy — Login,título del panel actual,alta,2026-04-16,,,la versión anterior usa «GreenProxy — Login»
 rfq-aitm,cadena,GPKEY-,prefijo de las licencias de la plataforma,alta,2026-04-16,,,el panel pide una clave con formato GPKEY-XXXX-XXXX-XXXX
+mirai-wraith,dominio,murrezbots.vip,dominio de la botnet,alta,2026-05-08,activo,2026-11-04,"registrado el 2026-03-23 (Dynadot); sigue resolviendo a 94.26.106.29, el servidor del proxy de la campaña RFQ"
+mirai-wraith,host,cnc.murrezbots.vip,centro de comando (C2) de la botnet,alta,2026-05-08,activo,2026-11-04,el servidor presentaba un certificado a su nombre el 2026-05-08; su registro TXT repite la IP del servidor
+mirai-wraith,url,http://94.26.106.29/bins/xnxnxnxnxnxnxnxnaarch64xnxn,descarga del binario Mirai para aarch64,alta,2026-05-06,caido,2026-11-04,"URLhaus, 6-may-2026; fuera de línea a las 3 horas"
+mirai-wraith,url,http://94.26.106.29/bins/xnxnxnxnxnxnxnxni386xnxn,descarga del binario Mirai para i386,alta,2026-05-06,caido,2026-11-04,"URLhaus, 6-may-2026; fuera de línea a las 4 horas"
+mirai-wraith,sha256,e64d909993647ed17312cea32f60ec65d71dd440ac126d2360aaeeaaf72f7cc1,"binario Mirai «wraith» (ELF aarch64, UPX)",alta,2026-05-06,,,MalwareBazaar: Mirai; Intezer: Mirai
+mirai-wraith,sha256,eead126f579323883adaee039a9c46ebc855dbd21d399c35ef746266bfecffd8,"binario Mirai «wraith» (ELF i386, UPX)",alta,2026-05-06,,,MalwareBazaar: Mirai; ReversingLabs: Linux.Trojan.Multiverze

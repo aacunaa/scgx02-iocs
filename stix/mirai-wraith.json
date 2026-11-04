@@ -1,0 +1,264 @@
+{
+ "type": "bundle",
+ "id": "bundle--2286661c-59a4-52f9-b2d7-c4efddbee176",
+ "objects": [
+  {
+   "type": "marking-definition",
+   "spec_version": "2.1",
+   "id": "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9",
+   "created": "2017-01-20T00:00:00.000Z",
+   "definition_type": "tlp",
+   "name": "TLP:WHITE",
+   "definition": {
+    "tlp": "white"
+   }
+  },
+  {
+   "type": "identity",
+   "spec_version": "2.1",
+   "id": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "name": "Raiku Solutions",
+   "identity_class": "organization",
+   "sectors": [
+    "technology"
+   ],
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ]
+  },
+  {
+   "type": "campaign",
+   "id": "campaign--0d87a58d-e5c5-5f44-a08e-0c79d1382570",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "Mirai «wraith» / murrezbots",
+   "description": "Botnet IoT de la familia Mirai (variante etiquetada «wraith» en abuse.ch) con centro de comando en cnc.murrezbots.vip. En mayo de 2026 repartió binarios desde 94.26.106.29, el mismo servidor que desde agosto de 2026 aloja la puerta y el proxy AiTM de la campaña RFQ: probable mismo operador, no probado.",
+   "first_seen": "2026-05-06T00:00:00.000Z"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--172fd42c-cb8d-50d1-b68b-04083108cbeb",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "dominio de la botnet: murrezbots[.]vip",
+   "description": "registrado el 2026-03-23 (Dynadot); sigue resolviendo a 94.26.106.29, el servidor del proxy de la campaña RFQ",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'murrezbots.vip']",
+   "pattern_type": "stix",
+   "valid_from": "2026-05-08T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--32285e44-b0c2-5528-8800-ed6d8bd4a0bc",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--172fd42c-cb8d-50d1-b68b-04083108cbeb",
+   "target_ref": "campaign--0d87a58d-e5c5-5f44-a08e-0c79d1382570"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--8130a923-f88a-5dab-bc06-f82b7a00e84c",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "centro de comando (C2) de la botnet: cnc[.]murrezbots[.]vip",
+   "description": "el servidor presentaba un certificado a su nombre el 2026-05-08; su registro TXT repite la IP del servidor",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[domain-name:value = 'cnc.murrezbots.vip']",
+   "pattern_type": "stix",
+   "valid_from": "2026-05-08T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:activo"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--65a07ad9-c434-5673-a076-e1a089cb7444",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--8130a923-f88a-5dab-bc06-f82b7a00e84c",
+   "target_ref": "campaign--0d87a58d-e5c5-5f44-a08e-0c79d1382570"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--9c610055-6c09-5b9d-b610-f2e313b30275",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "descarga del binario Mirai para aarch64: hxxp://94[.]26[.]106[.]29/bins/xnxnxnxnxnxnxnxnaarch64xnxn",
+   "description": "URLhaus, 6-may-2026; fuera de línea a las 3 horas",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[url:value = 'http://94.26.106.29/bins/xnxnxnxnxnxnxnxnaarch64xnxn']",
+   "pattern_type": "stix",
+   "valid_from": "2026-05-06T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:caido"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--85ddd4b9-184c-52ae-83a4-eccbfccbd2cb",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--9c610055-6c09-5b9d-b610-f2e313b30275",
+   "target_ref": "campaign--0d87a58d-e5c5-5f44-a08e-0c79d1382570"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--4074d6b3-7e78-5213-908a-38ec63f1f4fb",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "descarga del binario Mirai para i386: hxxp://94[.]26[.]106[.]29/bins/xnxnxnxnxnxnxnxni386xnxn",
+   "description": "URLhaus, 6-may-2026; fuera de línea a las 4 horas",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[url:value = 'http://94.26.106.29/bins/xnxnxnxnxnxnxnxni386xnxn']",
+   "pattern_type": "stix",
+   "valid_from": "2026-05-06T00:00:00.000Z",
+   "confidence": 85,
+   "labels": [
+    "estado:caido"
+   ]
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--bc685479-e54f-51fc-9849-07def47fac7a",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--4074d6b3-7e78-5213-908a-38ec63f1f4fb",
+   "target_ref": "campaign--0d87a58d-e5c5-5f44-a08e-0c79d1382570"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--4d5c0766-db70-5af9-8f5a-cbf9ca05be31",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "binario Mirai «wraith» (ELF aarch64, UPX): e64d909993647ed17312cea32f60ec65d71dd440ac126d2360aaeeaaf72f7cc1",
+   "description": "MalwareBazaar: Mirai; Intezer: Mirai",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[file:hashes.'SHA-256' = 'e64d909993647ed17312cea32f60ec65d71dd440ac126d2360aaeeaaf72f7cc1']",
+   "pattern_type": "stix",
+   "valid_from": "2026-05-06T00:00:00.000Z",
+   "confidence": 85,
+   "labels": []
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--3c67e250-446f-54bc-8db8-1b7043bcd8e1",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--4d5c0766-db70-5af9-8f5a-cbf9ca05be31",
+   "target_ref": "campaign--0d87a58d-e5c5-5f44-a08e-0c79d1382570"
+  },
+  {
+   "type": "indicator",
+   "id": "indicator--ba8ea5d9-e365-511a-b440-15c883cbb751",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "name": "binario Mirai «wraith» (ELF i386, UPX): eead126f579323883adaee039a9c46ebc855dbd21d399c35ef746266bfecffd8",
+   "description": "MalwareBazaar: Mirai; ReversingLabs: Linux.Trojan.Multiverze",
+   "indicator_types": [
+    "malicious-activity"
+   ],
+   "pattern": "[file:hashes.'SHA-256' = 'eead126f579323883adaee039a9c46ebc855dbd21d399c35ef746266bfecffd8']",
+   "pattern_type": "stix",
+   "valid_from": "2026-05-06T00:00:00.000Z",
+   "confidence": 85,
+   "labels": []
+  },
+  {
+   "type": "relationship",
+   "id": "relationship--cb2a6a29-5f77-5aab-b153-5f7ad1b85182",
+   "spec_version": "2.1",
+   "created": "2026-11-04T00:00:00.000Z",
+   "modified": "2026-11-04T00:00:00.000Z",
+   "created_by_ref": "identity--2dfdaf8d-b1e9-5d87-bb56-2d3bf0f0a6b3",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "indicates",
+   "source_ref": "indicator--ba8ea5d9-e365-511a-b440-15c883cbb751",
+   "target_ref": "campaign--0d87a58d-e5c5-5f44-a08e-0c79d1382570"
+  }
+ ]
+}

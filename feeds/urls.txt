@@ -1,4 +1,6 @@
-# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM — URLs. TLP:CLEAR. Versión 2026-11-04. Fuente: datos/iocs.csv. Un valor por línea.
+# SCGX02 / CodeStorm + RFQ en dos pasos / proxy AiTM + Mirai «wraith» / murrezbots — URLs. TLP:CLEAR. Versión 2026-11-04. Fuente: datos/iocs.csv. Un valor por línea.
+http://94.26.106.29/bins/xnxnxnxnxnxnxnxnaarch64xnxn
+http://94.26.106.29/bins/xnxnxnxnxnxnxnxni386xnxn
 https://a4vhglh3m.yizhaojingyun.com/v1df2lmz-gpl5fqfab2-vpd6dfbxiwgsg-8iyxionbd8wsj
 https://flyn.co/pKaYZP
 https://hfkme.blob.core.windows.net/hfkme/hfk.html
