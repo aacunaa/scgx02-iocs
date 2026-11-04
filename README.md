@@ -43,7 +43,7 @@ La raíz del dominio del captcha, `greenproxysimpleserver[.]cc`, es el **panel d
 
 **Para encontrar paneles nuevos:** en urlscan.io, busque `hash:50448224e0cb3dbcee198157ad6e01f3c59b36b7fb7e43601aa9f94ed842fb6a` (HTML del panel) o `hash:d1fc8bf9fbb5a0efaef075466ddb2531e07a7a6405e31d2155538c03af77f688` (logo).
 
-**Relación con una botnet (campaña aparte en este repositorio):** el 6 de mayo de 2026, el mismo servidor que hoy hace de proxy (`94.26.106.29`, TechTies, AS197170) repartía binarios de **Mirai** desde `/bins/<arquitectura>`. URLhaus los registró y MalwareBazaar los clasifica como Mirai con la etiqueta «wraith», una variante sin reportes públicos. El servidor presentaba un certificado a nombre de `cnc.murrezbots[.]vip`, que todavía apunta a la misma IP. Los indicadores de la botnet van como campaña aparte, «Mirai «wraith» / murrezbots». Que sea el mismo operador que el phishing es **probable, no probado**: el proveedor pudo reasignar la IP.
+**Relación con una botnet (campaña aparte en este repositorio):** el 6 de mayo de 2026, la misma IP que hoy aloja el proxy (`94.26.106.29`) repartía binarios de **Mirai** desde `/bins/<arquitectura>`. URLhaus los registró y MalwareBazaar los clasifica como Mirai con la etiqueta «wraith», una variante sin reportes públicos. La IP presentaba un certificado a nombre de `cnc.murrezbots[.]vip`, que todavía apunta a ella. **Ojo:** en mayo el bloque `94.26.106.0/24` lo anunciaba dataforest GmbH (AS215607); desde el 31 de mayo lo anuncia TechTies (AS197170). La IP pudo cambiar de manos entre la botnet y el phishing, así que el mismo operador es **posible, no probado**.
 
 ## Qué hay aquí
 

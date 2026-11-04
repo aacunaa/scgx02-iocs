@@ -52,8 +52,8 @@ CAMPANAS = {
     "mirai-wraith": {
         "nombre": "Mirai «wraith» / murrezbots", "stix": "stix/mirai-wraith.json",
         "descripcion": "Botnet IoT de la familia Mirai (variante etiquetada «wraith» en abuse.ch) con centro de comando en cnc.murrezbots.vip. "
-                       "En mayo de 2026 repartió binarios desde 94.26.106.29, el mismo servidor que desde agosto de 2026 aloja la puerta y el "
-                       "proxy AiTM de la campaña RFQ: probable mismo operador, no probado."},
+                       "En mayo de 2026 repartió binarios desde 94.26.106.29 (entonces anunciada por AS215607), la misma IP que desde agosto de 2026 "
+                       "(ya en AS197170) aloja la puerta y el proxy AiTM de la campaña RFQ: mismo operador posible, no probado."},
 }
 
 
