@@ -30,6 +30,8 @@ El repositorio nació con SCGX02, de ahí su nombre.
 
 ### La plataforma detrás: «Green Proxy»
 
+**Análisis completo:** [raiku.cl/research/green-proxy](https://raiku.cl/research/green-proxy) (inglés) · [versión en español](https://raiku.cl/research/green-proxy-es).
+
 La raíz del dominio del captcha, `greenproxysimpleserver[.]cc`, es el **panel de clientes de una plataforma de phishing como servicio llamada «Green Proxy»**. Pide usuario, contraseña y una **licencia `GPKEY-XXXX-XXXX-XXXX`** y permite crear cuentas: el kit se arrienda. Quien envía los correos es probablemente un cliente, no el autor.
 
 | Fecha | Hito |
@@ -110,6 +112,8 @@ Datos y reglas bajo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed
 ---
 
 ## English summary
+
+**Write-up:** [Green Proxy: a first look at an undocumented AiTM phishing-as-a-service platform](https://raiku.cl/research/green-proxy).
 
 IOCs for two adversary-in-the-middle (AiTM) phishing campaigns against Microsoft 365:
 
